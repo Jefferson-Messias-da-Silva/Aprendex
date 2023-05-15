@@ -17,7 +17,7 @@ form.addEventListener('submit', (event) => {
 //Verifica se o valor inserido não está vazio ou contém apenas espaços em branco.
   if (searchTerm.trim() !== '') {
 // Exibe uma mensagem na página, informando que a busca está sendo realizada.
-    results.innerHTML = `<p th:text="Buscando por: ${searchTerm}"></p>`;
+    results.innerHTML = `<p th:text="">Buscando por: ${searchTerm}</p>`;
 
     
     // Adicione aqui a lógica para buscar os resultados e exibi-los na página.

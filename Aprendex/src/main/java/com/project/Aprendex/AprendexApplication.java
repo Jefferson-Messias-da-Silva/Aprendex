@@ -3,6 +3,7 @@ package com.project.Aprendex;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+
 @SpringBootApplication
 public class AprendexApplication {
 
