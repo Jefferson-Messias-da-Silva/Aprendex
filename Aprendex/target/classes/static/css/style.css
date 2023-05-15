@@ -1,0 +1,157 @@
+/* Estilos padrão */
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: orchid;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aquamarine;
+    border-style: solid;
+    border-bottom-width: 5px;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-color: #fff;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #fff;
+    margin-left: 15px;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+  }
+  
+  .menu li {
+    margin-left: 20px;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .menu a:hover {
+    background-color: #fff;
+    color: #333;
+    border-radius: 5px;
+  }
+  
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  h1 {
+    margin-top: 0;
+    font-size: 36px;
+    text-align: center;
+    color: #333;
+  }
+  
+  form {
+    display: flex;
+    justify-content: right;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"] {
+    width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-right: 4px;
+    margin-top: 10px;
+  }
+  
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 15px;
+    margin-top: 10px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  .results {
+    border: 2px solid #ccc;
+    padding: 20px;
+    text-align: left;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    color: #333;
+  }
+  
+  #sobre-nos {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #333;
+  }
+  h2 {
+      color: orange;
+  }
+
+  .carousel {
+    max-width: 600px; /* ou outro valor desejado */
+    margin: auto; /* centralizar na página */
+  }
+  
+  /* Redimensionar as imagens para ajustar ao tamanho do carousel */
+  .carousel img {
+    width: 100%;
+    height: auto;
+  }
+  
+  
+  /* Estilos para telas menores */
+  
+  @media only screen and (max-width: 600px) {
+    nav {
+      flex-direction: column;
+    }
+    
+    .menu li {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+    
+    input[type="text"] {
+      width: 100%;
+    }
+    
+    button[type="submit"] {
+      width: 100%;
+    }
+  }
+  
+  
+  
