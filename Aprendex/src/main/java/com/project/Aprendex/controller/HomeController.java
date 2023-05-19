@@ -38,6 +38,8 @@ public class HomeController {
     }
     @RequestMapping (value="/save",method=RequestMethod.POST)
     public String cadastrando(@ModelAttribute Usuario usuario) {
+
+
         this.usuarioService.cadastrar(usuario);
 
 
