@@ -1,12 +1,14 @@
-<!DOCTYPE html >
+<!DOCTYPE html>
 <html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
     <title>Página de Busca</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <link rel="stylesheet" th:href="@{css/style.css}">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE-edge"/>
+    <link rel="stylesheet" th:href="@{css/style.css}"/>
     <script th:src="@{js/script.js}"></script>
 </head>
 <nav>
@@ -14,7 +16,7 @@
     <ul class="menu">
         <li><a th:href="@{/}">Home</a></li>
         <li><a th:href="@{/login}">Login</a></li>
-        <li><a th:href="@{/cadastro}">Cadastro</a></li>
+        <li><a th:href="@{/cadastrar}">Cadastro</a></li>
         <li><a th:href="@{/sobre}">Sobre</a></li>
     </ul>
     <form>

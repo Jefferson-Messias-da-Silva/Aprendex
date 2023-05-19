@@ -1,11 +1,12 @@
 package com.project.Aprendex.model;
 
 import jakarta.persistence.*;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
 
 @Entity
-@Table(name = "CURSO")
+@Document
 public class Curso implements Serializable{
     private static final long serialVersionUID = 1L;
 
