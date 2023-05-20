@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Página de Busca</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" th:href="@{/css/home.css}">
+      <link rel="stylesheet" href="http://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+      <link rel="stylesheet" href="http:/resources/demos/style.css">
+      <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+      <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+    $( function() {
+      $( "#tabs" ).tabs();
+    } );
+    </script>
+  </head>
+
+  <body>
+  <nav class="FixoNoTopo">
+      <img th:src="@{/imagem/logo01.png}" alt="Logo" class="logo">
+      <ul class="menu">
+          <li><a th:href="@{/}">Home</a></li>
+          <li><a th:href="@{/cursos}">Cursos</a></li>
+          <li><a th:href="@{/login}">Login</a></li>
+          <li><a th:href="@{/}">Sobre</a></li>
+          <li><a th:href="@{/cadastro-cursos}">Cadastre seu Curso</a></li>
+      </ul>
+      <main>
+          <div class="SearchBox active">
+              <input type="text" class="SearchBox-input" placeholder="Procure seu curso">
+              <button class="SearchBox-button">
+                  <i class="SearchBox-icon  material-icons">search</i>
+              </button>
+          </div>
+      </main>
+  </nav>
+
+    <h1 class="telacurso"> Todos dos Cursos </h1>
+    <div id="tabs">
+        <ul>
+          <li class="lis"><a href="#tabs-1">YYYYYYYY</a></li>
+          <li class="lis"><a href="#tabs-2">XXXXXXXX</a></li>
+          <li class="lis"><a href="#tabs-3">YYYYYYYY</a></li>
+          <li class="lis"><a href="#tabs-4">ZZZZZZZZ</a></li>
+          <li class="lis"><a href="#tabs-5">YYYYYYYY</a></li>
+        </ul>
+        <div id="tabs-1">
+            <div id="tab0" class="tab-content">
+                <div class="planColumn">
+                  <h2>XXXXXXXXXX</h2>
+                    <div class="planOptionDetailText">XXXXXXX</div>
+                    <div class="planOptionDetailText">XXXXXXXXX</div>
+                    <div class="planSignup"><a href="#" class="botao">Inscreva - se</a></div>
+                </div> 
+                <div class="planColumn">
+                  <h2>XXXXXXXXXX</h2>
+                    <div class="planOptionDetailText">XXXXXXX</div>
+                    <div class="planOptionDetailText">XXXXXXXXX</div>
+                    <div class="planSignup"><a href="#" class="botao">Inscreva - se</a></div>
+                </div>
+                <div class="planColumn">
+                  <h2>XXXXXXXXXX</h2>
+                    <div class="planOptionDetailText">XXXXXXX</div>
+                    <div class="planOptionDetailText">XXXXXXXXX</div>
+                    <div class="planSignup"><a href="#" class="botao">Inscreva - se</a></div>
+                </div>
+            </div>
+        </div>
+        <div id="tabs-2">
+            <div id="tab0" class="tab-content">
+                <div class="planColumn">
+                  <h2>XXXXXXXXXX</h2>
+                    <div class="planOptionDetailText">XXXXXXX</div>
+                    <div class="planOptionDetailText">XXXXXXXXX</div>
+                    <div class="planSignup"><a href="#" class="btn-orange">Inscreva - se</a></div>
+                </div> 
+                <div class="planColumn">
+                  <h2>XXXXXXXXXX</h2>
+                    <div class="planOptionDetailText">XXXXXXX</div>
+                    <div class="planOptionDetailText">XXXXXXXXX</div>
+                    <div class="planSignup"><a href="#" class="btn-orange">Inscreva - se</a></div>
+                </div>
+                <div class="planColumn">
+                  <h2>XXXXXXXXXX</h2>
+                    <div class="planOptionDetailText">XXXXXXX</div>
+                    <div class="planOptionDetailText">XXXXXXXXX</div>
+                    <div class="planSignup"><a href="#" class="btn-orange">Inscreva - se</a></div>
+                </div>
+                <div class="planColumn">
+                    <h2>XXXXXXXXXX</h2>
+                      <div class="planOptionDetailText">XXXXXXX</div>
+                      <div class="planOptionDetailText">XXXXXXXXX</div>
+                      <div class="planSignup"><a href="#" class="btn-orange">Inscreva - se</a></div>
+                  </div>
+            </div>
+        </div>
+        <div id="tabs-3">
+            <div id="tab0" class="tab-content">
+                <div class="planColumn">
+                  <h2>XXXXXXXXXX</h2>
+                    <div class="planOptionDetailText">XXXXXXX</div>
+                    <div class="planOptionDetailText">XXXXXXXXX</div>
+                    <div class="planSignup"><a href="#" class="btn-orange">Inscreva - se</a></div>
+                </div> 
+                <div class="planColumn">
+                  <h2>XXXXXXXXXX</h2>
+                    <div class="planOptionDetailText">XXXXXXX</div>
+                    <div class="planOptionDetailText">XXXXXXXXX</div>
+                    <div class="planSignup"><a href="#" class="btn-orange">Inscreva - se</a></div>
+                </div>
+                <div class="planColumn">
+                  <h2>XXXXXXXXXX</h2>
+                    <div class="planOptionDetailText">XXXXXXX</div>
+                    <div class="planOptionDetailText">XXXXXXXXX</div>
+                    <div class="planSignup"><a href="#" class="btn-orange">Inscreva - se</a></div>
+                </div>
+                <div class="planColumn">
+                    <h2>XXXXXXXXXX</h2>
+                      <div class="planOptionDetailText">XXXXXXX</div>
+                      <div class="planOptionDetailText">XXXXXXXXX</div>
+                      <div class="planSignup"><a href="#" class="btn-orange">Inscreva - se</a></div>
+                  </div>
+            </div>
+        </div>
+        <div id="tabs-4">
+            <div id="tab0" class="tab-content">
+                <div class="planColumn">
+                  <h2>XXXXXXXXXX</h2>
+                    <div class="planOptionDetailText">XXXXXXX</div>
+                    <div class="planOptionDetailText">XXXXXXXXX</div>
+                    <div class="planSignup"><a href="#" class="btn-orange">Inscreva - se</a></div>
+                </div> 
+                <div class="planColumn">
+                  <h2>XXXXXXXXXX</h2>
+                    <div class="planOptionDetailText">XXXXXXX</div>
+                    <div class="planOptionDetailText">XXXXXXXXX</div>
+                    <div class="planSignup"><a href="#" class="btn-orange">Inscreva - se</a></div>
+                </div>
+                <div class="planColumn">
+                  <h2>XXXXXXXXXX</h2>
+                    <div class="planOptionDetailText">XXXXXXX</div>
+                    <div class="planOptionDetailText">XXXXXXXXX</div>
+                    <div class="planSignup"><a href="#" class="btn-orange">Inscreva - se</a></div>
+                </div>
+                <div class="planColumn">
+                    <h2>XXXXXXXXXX</h2>
+                      <div class="planOptionDetailText">XXXXXXX</div>
+                      <div class="planOptionDetailText">XXXXXXXXX</div>
+                      <div class="planSignup"><a href="#" class="btn-orange">Inscreva - se</a></div>
+                  </div>
+            </div>
+        </div>
+        <div id="tabs-5">
+            <div id="tab0" class="tab-content">
+                <div class="planColumn">
+                  <h2>XXXXXXXXXX</h2>
+                    <div class="planOptionDetailText">XXXXXXX</div>
+                    <div class="planOptionDetailText">XXXXXXXXX</div>
+                    <div class="planSignup"><a href="#" class="btn-orange">Inscreva - se</a></div>
+                </div> 
+                <div class="planColumn">
+                  <h2>XXXXXXXXXX</h2>
+                    <div class="planOptionDetailText">XXXXXXX</div>
+                    <div class="planOptionDetailText">XXXXXXXXX</div>
+                    <div class="planSignup"><a href="#" class="btn-orange">Inscreva - se</a></div>
+                </div>
+                <div class="planColumn">
+                  <h2>XXXXXXXXXX</h2>
+                    <div class="planOptionDetailText">XXXXXXX</div>
+                    <div class="planOptionDetailText">XXXXXXXXX</div>
+                    <div class="planSignup"><a href="#" class="btn-orange">Inscreva - se</a></div>
+                </div>
+            </div>
+        </div>
+      </div>
+  </body>
+</html>

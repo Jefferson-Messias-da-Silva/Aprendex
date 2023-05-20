@@ -1,157 +1,181 @@
-/* Estilos padrão */
-
-* {
-    box-sizing: border-box;
-  }
-  
-  body {
+*{
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: orchid;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: aquamarine;
-    border-style: solid;
-    border-bottom-width: 5px;
-    border-top-width: 0;
-    border-left-width: 0;
-    border-color: #fff;
-  }
-  
-  .logo {
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: #fff;
-    margin-left: 15px;
-  }
-  
-  .menu {
-    list-style: none;
-    display: flex;
-  }
-  
-  .menu li {
-    margin-left: 20px;
-  }
-  
-  .menu a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.2rem;
-    padding: 5px;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .menu a:hover {
-    background-color: #fff;
-    color: #333;
-    border-radius: 5px;
-  }
-  
-  .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 50px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  }
-  
-  h1 {
-    margin-top: 0;
-    font-size: 36px;
-    text-align: center;
-    color: #333;
-  }
-  
-  form {
-    display: flex;
-    justify-content: right;
-    margin-bottom: 10px;
-  }
-  
-  input[type="text"] {
-    width: 400px;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 0;
     box-sizing: border-box;
-    margin-right: 4px;
-    margin-top: 10px;
-  }
-  
-  button[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-right: 15px;
-    margin-top: 10px;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #45a049;
-  }
-  
-  .results {
-    border: 2px solid #ccc;
-    padding: 20px;
-    text-align: left;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    color: #333;
-  }
-  
-  #sobre-nos {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    color: #333;
-  }
-  h2 {
-      color: orange;
-  }
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 
-  .carousel {
-    max-width: 600px; /* ou outro valor desejado */
-    margin: auto; /* centralizar na página */
-  }
-  
-  /* Redimensionar as imagens para ajustar ao tamanho do carousel */
-  .carousel img {
+    background: #3990C2;
+}
+
+.login{
+    background: #09356F;
+    border-radius: 10px;
+    width: 400px;
+    padding: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family: Candara;
+}
+
+.curso{
+    background: rgb(184, 137, 51);
+    border-radius: 10px;
+    width: 700px;
+    padding: 40px;
+    margin-bottom: 30px;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+.login h2{
+    margin-bottom: 30px;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+
+.login .box-user{
+    position: relative;
+}
+
+.login .box-user input{
     width: 100%;
-    height: auto;
-  }
-  
-  
-  /* Estilos para telas menores */
-  
-  @media only screen and (max-width: 600px) {
-    nav {
-      flex-direction: column;
+    padding: 10px 0;
+    outline: none;
+    border: 0;
+    background: transparent;
+    border-bottom: 1px solid white;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.login .box-user label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    color: white;
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.login .box-user input:focus~label,
+.login .box-user input:valid~label
+{
+    top: -20px;
+    left: 0;
+    color: white;
+    font-size: 12px;
+}
+.forget{
+    font-size: 12px;
+    color: white;
+    float: right;
+}
+.btn{
+    position: relative;
+    display: inline-block;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 700;
+    margin-top: 20px;
+    transition: .5s;
+    overflow: hidden;
+}
+.btn:hover{
+    background: #3990C2;
+    border-radius: 5px;
+    color: #09356F;
+}
+.btn span{
+    position: absolute;
+    display: block;
+}
+.btn span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #3990C2);
+    animation: btn1 1s linear infinite;
+}
+@keyframes btn1{
+    0%{
+        left: -100%;
     }
-    
-    .menu li {
-      margin-left: 0;
-      margin-top: 10px;
+    50%,
+    100%{
+        left: 100%;
     }
-    
-    input[type="text"] {
-      width: 100%;
+}
+.btn span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #3990C2);
+    animation: btn2 1s linear infinite;
+    animation-delay: .20s;
+}
+@keyframes btn2{
+    0%{
+        top: -100%;
     }
-    
-    button[type="submit"] {
-      width: 100%;
+    50%,
+    100%{
+        top: 100%;
     }
-  }
-  
-  
-  
+}
+.btn span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(270deg, transparent, #3990C2);
+    animation: btn3 1s linear infinite;
+    animation-delay: .45s;
+}
+@keyframes btn3{
+    0%{
+        right: -100%;
+    }
+    50%,
+    100%{
+        right: 100%;
+    }
+}
+.btn span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(26deg, transparent, #3990C2);
+    animation: btn4 1s linear infinite;
+    animation-delay: .70s;
+}
+@keyframes btn4{
+    0%{
+        bottom: -100%;
+    }
+    50%,
+    100%{
+        bottom: 100%;
+    }
+}
+@media (max-width: 405px){
+    .login{
+        width: 90%;
+    }
+}

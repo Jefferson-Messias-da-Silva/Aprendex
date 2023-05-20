@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Curso{
 
     @Id
-    private Long id;
+    private String id;
 
     private String nome;
     private String descricao;
@@ -18,7 +18,7 @@ public class Curso{
     private String instituicao;
     private Double valor;
 
-    public Curso(Long id, String nome, String descricao, String link, String endereco, String instituicao, Double valor) {
+    public Curso(String id, String nome, String descricao, String link, String endereco, String instituicao, Double valor) {
         this.id = id;
         this.nome = nome;
         this.descricao = descricao;

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR"  xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +9,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="shortcut icon" th:href="@{/imagem/favicon-32x32.png}" type="image/x-icon">
     <link rel="stylesheet" th:href="@{/css/home.css}">
-    <title>Login</title>
+    <title>Cadastre-se</title>
 </head>
 <body>
 <nav class="FixoNoTopo">
@@ -18,7 +19,7 @@
         <li><a th:href="@{/cursos}">Cursos</a></li>
         <li><a th:href="@{/login}">Login</a></li>
         <li><a th:href="@{/}">Sobre</a></li>
-        <li><a th:href="@{/cadastrar}">Cadastre seu Curso</a></li>
+        <li><a th:href="@{/cadastro-cursos}">Cadastre seu Curso</a></li>
     </ul>
     <main>
         <div class="SearchBox active">
@@ -33,26 +34,39 @@
     <div class="container">
      <br>
      <br>
-     <form class="login" th:action="@{/logado}" method="post">
-        <h2>Login</h2>
+    <form class="login" th:action="@{/save}" method="post">
+        <h2>Cadastro</h2>
+        <div class="box-user">
+            <input type="text" name="nome" id="nome" required>
+            <label>Nome</label>
+        </div>
+        <div class="box-user">
+            <input type="text" name="sobrenome" id="sobrenome" required>
+            <label>Sobrenome</label>
+        </div>
+        <div class="box-user">
+            <input type="text" name="login" id="login" required>
+            <label>Nome de Usuário</label>
+        </div>
         <div class="box-user">
             <input type="text" name="email" id="email" required>
-            <label>Email</label>
+            <label>E-mail</label>
         </div>
         <div class="box-user">
             <input type="password" name="senha" id="senha" required>
             <label>Senha</label>
         </div>
         <div>
-            <a th:href="@{/cadastrar}" class="forget"> Ainda não é Membro?</a>
+            <a th:href="@{/login}" class="forget"> Já tem conta?</a>
         </div>
-        <button th:href="@{/}" type="submit" class="btn boton">
+        <button th:href="@{/}" type="submit" class="btn">
             <span></span>
             <span></span>
             <span></span>
             <span></span>
-            Entrar
-        </button>
+            Cadastrar
+        </button>>
     </form>
+    </div>
 </body>
 </html>

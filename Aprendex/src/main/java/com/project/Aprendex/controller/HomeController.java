@@ -1,5 +1,6 @@
 package com.project.Aprendex.controller;
 
+import com.project.Aprendex.service.CursoService;
 import com.project.Aprendex.service.UsuarioService;
 import com.project.Aprendex.model.Curso;
 import com.project.Aprendex.model.Usuario;
@@ -13,26 +14,28 @@ import org.springframework.web.bind.annotation.*;
 public class HomeController {
     @Autowired
     private UsuarioService usuarioService;
+    @Autowired
+    private CursoService cursoService;
 
     @GetMapping("/")
     public String home(ModelMap model) {
 
-        return "index";
+        return "home";
     }
 
 
-    private Curso cursoService;
+
 
     @GetMapping("/sobre")
     public String sobre () {
 
-        return "index";
+        return "home";
     }
     @GetMapping("/cadastrar")
     public String cadastro() {
 
 
-        return "cadastrar";
+        return "cadastro";
     }
     @RequestMapping (value="/save",method=RequestMethod.POST)
     public String cadastrando(@ModelAttribute Usuario usuario) {
@@ -53,11 +56,28 @@ public class HomeController {
             return "redirect:";
         }
     }
+    @RequestMapping (value="/curso-cadastrado",method=RequestMethod.POST)
+    public String cadastrocurso(Curso curso) {
+        this.cursoService.cadastrarCurso(curso);
+
+
+            return "redirect:";
+    }
+
 
     @GetMapping("/login")
     public String login() {
 
         return "login";
+    }
+
+    @GetMapping("/cursos")
+    public String cursos(){
+        return "telacurso";
+    }
+    @GetMapping("/cadastro-cursos")
+    public String cadastrocursos(){
+        return "cadastroCurso";
     }
 
 }

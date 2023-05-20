@@ -1,15 +1,39 @@
 <!DOCTYPE html>
-<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" th:href="@{/css/stylelogin.css}">
-    <title>Tela de Login - Dev Envolvente</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" th:href="@{/imagem/favicon-32x32.png}" type="image/x-icon">
+    <link rel="stylesheet" th:href="@{/css/home.css}">
+    <title>Login</title>
 </head>
 <body>
-    <form class="login" th:action="@{/logado}" method="post">
+<nav class="FixoNoTopo">
+    <img th:src="@{/imagem/logo01.png}" alt="Logo" class="logo">
+    <ul class="menu">
+        <li><a th:href="@{/}">Home</a></li>
+        <li><a th:href="@{/cursos}">Cursos</a></li>
+        <li><a th:href="@{/login}">Login</a></li>
+        <li><a th:href="@{/}">Sobre</a></li>
+        <li><a th:href="@{/cadastrar}">Cadastre seu Curso</a></li>
+    </ul>
+    <main>
+        <div class="SearchBox active">
+            <input type="text" class="SearchBox-input" placeholder="Procure seu curso">
+            <button class="SearchBox-button">
+                <i class="SearchBox-icon  material-icons">search</i>
+            </button>
+        </div>
+    </main>
+</nav>
+    <br>
+    <div class="container">
+     <br>
+     <br>
+     <form class="login" th:action="@{/logado}" method="post">
         <h2>Login</h2>
         <div class="box-user">
             <input type="text" name="email" id="email" required>
@@ -22,7 +46,7 @@
         <div>
             <a th:href="@{/cadastrar}" class="forget"> Ainda não é Membro?</a>
         </div>
-        <button th:href="@{/}" class="btn boton">
+        <button th:href="@{/}" type="submit" class="btn boton">
             <span></span>
             <span></span>
             <span></span>
