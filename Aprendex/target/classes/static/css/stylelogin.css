@@ -80,7 +80,7 @@ body{
     transition: .5s;
     overflow: hidden;
     background-color: transparent;
-    border:1px;
+    border:1px; 
 }
 .btn:hover{
     background: #3990C2;
