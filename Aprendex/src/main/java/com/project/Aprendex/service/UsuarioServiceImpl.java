@@ -1,15 +1,12 @@
-package com.project.Aprendex.Service;
+package com.project.Aprendex.service;
 
-import com.project.Aprendex.Repository.UsuarioRepository;
+import com.project.Aprendex.repository.UsuarioRepository;
 import com.project.Aprendex.model.Usuario;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
 
-import java.util.List;
 import java.util.Optional;
-import java.util.OptionalInt;
 
 @Service
 public class UsuarioServiceImpl implements UsuarioService{

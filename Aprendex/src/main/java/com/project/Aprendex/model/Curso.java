@@ -4,15 +4,11 @@ import jakarta.persistence.*;
 import lombok.Data;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.io.Serializable;
-
 @Data
 @Document
-public class Curso implements Serializable{
-    private static final long serialVersionUID = 1L;
+public class Curso{
 
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
 
     private String nome;

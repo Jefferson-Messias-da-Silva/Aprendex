@@ -1,11 +1,9 @@
-package com.project.Aprendex.Repository;
+package com.project.Aprendex.repository;
 
 import com.project.Aprendex.model.Usuario;
 import org.springframework.data.mongodb.repository.MongoRepository;
-import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
 import java.util.Optional;
 
 @Repository
