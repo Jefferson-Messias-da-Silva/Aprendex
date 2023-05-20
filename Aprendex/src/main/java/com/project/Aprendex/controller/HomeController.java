@@ -5,6 +5,7 @@ import com.project.Aprendex.model.Curso;
 import com.project.Aprendex.model.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -44,6 +45,16 @@ public class HomeController {
 
 
         return "redirect:";
+    }
+    @RequestMapping (value="/logado",method=RequestMethod.POST)
+    public String logado(String email, String senha) {
+
+        if(this.usuarioService.login(email,senha) == null){
+            return "redirect:login";
+        }else {
+
+            return "redirect:";
+        }
     }
 
     @GetMapping("/login")

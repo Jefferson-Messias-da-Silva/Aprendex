@@ -14,7 +14,6 @@ public class Usuario {
 
 
     @Id
-
     private String id;
 
     private String nome;
@@ -32,17 +31,6 @@ public class Usuario {
         this.email = email;
         this.tipo = tipo;
     }
-    public Usuario(String id, String nome, String senha, String email) {
-        this.id = id;
-        this.nome = nome;
-
-
-        this.senha = senha;
-        this.email = email;
-
-    }
-
-
 
     @Override
     public String toString() {

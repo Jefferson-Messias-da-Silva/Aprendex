@@ -9,14 +9,14 @@
     <title>Tela de Login - Dev Envolvente</title>
 </head>
 <body>
-    <form class="login">
+    <form class="login" th:action="@{/logado}" method="post">
         <h2>Login</h2>
         <div class="box-user">
-            <input type="text" name="" required>
-            <label>Usuário</label>
+            <input type="text" name="email" id="email" required>
+            <label>Email</label>
         </div>
         <div class="box-user">
-            <input type="password" name="" required>
+            <input type="password" name="senha" id="senha" required>
             <label>Senha</label>
         </div>
         <div>
