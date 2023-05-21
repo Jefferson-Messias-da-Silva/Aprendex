@@ -47,12 +47,12 @@ public class HomeController {
         return "redirect:";
     }
     @RequestMapping (value="/logado",method=RequestMethod.POST)
-    public String logado(String email, String senha) {
+    public String logado(ModelMap model, String email, String senha) {
 
         if(this.usuarioService.login(email,senha) == null){
             return "redirect:login";
         }else {
-
+            model.addAttribute(this.usuarioService.login(email, senha));
             return "redirect:";
         }
     }
