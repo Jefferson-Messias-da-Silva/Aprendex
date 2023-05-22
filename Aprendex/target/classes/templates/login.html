@@ -17,7 +17,8 @@
         <li><a th:href="@{/}">Home</a></li>
         <li><a th:href="@{/cursos}">Cursos</a></li>
         <li><a th:href="@{/login}">Login</a></li>
-        <li><a th:href="@{/}">Sobre</a></li>
+        <li><a th:href="@{/cadastrar}">Cadastre-se</a></li>
+        <li><a th:href="@{/sobre}">Sobre</a></li>
         <li><a th:href="@{/cadastrar}">Cadastre seu Curso</a></li>
     </ul>
     <main>
@@ -33,14 +34,14 @@
     <div class="container">
      <br>
      <br>
-     <form class="login" th:action="@{/logado}" method="post">
+     <form class="login" th:action="@{/logado}" method="post" th:object="${usuario}">
         <h2>Login</h2>
         <div class="box-user">
             <input type="text" name="email" id="email" required>
             <label>Email</label>
         </div>
         <div class="box-user">
-            <input type="password" name="senha" id="senha" required>
+            <input type="password" name="senha" id="senha" required >
             <label>Senha</label>
         </div>
         <div>

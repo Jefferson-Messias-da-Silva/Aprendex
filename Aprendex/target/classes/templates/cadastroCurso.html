@@ -18,7 +18,8 @@
         <li><a th:href="@{/}">Home</a></li>
         <li><a th:href="@{/cursos}">Cursos</a></li>
         <li><a th:href="@{/login}">Login</a></li>
-        <li><a th:href="@{/}">Sobre</a></li>
+        <li><a th:href="@{/cadastrar}">Cadastre-se</a></li>
+        <li><a th:href="@{/sobre}">Sobre</a></li>
         <li><a th:href="@{/cadastro-cursos}">Cadastre seu Curso</a></li>
     </ul>
     <main>
@@ -42,16 +43,16 @@
         </div>
         <div class="checkbox">
                   <legend>Categoria</legend><br>
-                  <input type="radio" name="radio-1" id="radio-1">
-                  <label for="radio-1">Presencial</label><br>
-                  <input type="radio" name="radio-1" id="radio-2">
-                  <label for="radio-2">EAD (Estudo à Distância)</label><br>
-                  <input type="radio" name="radio-1" id="radio-3">
-                  <label for="radio-3">Aulas Híbridas</label>
+                  <input type="radio" name="categoria" id="categoria1" value="Presencial"  required>
+                  <label for="categoria1">Presencial</label><br>
+                  <input type="radio" name="categoria" id="categoria2" value="EAD (Estudo à Distância)" required>
+                  <label for="categoria2">EAD (Estudo à Distância)</label><br>
+                  <input type="radio" name="categoria" id="categoria3" value="Aulas Híbridas" required>
+                  <label for="categoria3">Aulas Híbridas</label>
         </div>
         <br>
         <div class="box-user">
-            <input type="text" name="duracao" id="duracao" required>
+            <input type="number" name="duracao" id="duracao" required>
             <label>Duração do Curso (por semestre)</label>
         </div>
         <div class="box-user">

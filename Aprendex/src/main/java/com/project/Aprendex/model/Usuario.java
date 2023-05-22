@@ -29,6 +29,10 @@ public class Usuario {
         this.tipo = tipo;
     }
 
+    public Usuario() {
+
+    }
+
     @Override
     public String toString() {
         return "Usuario{" +

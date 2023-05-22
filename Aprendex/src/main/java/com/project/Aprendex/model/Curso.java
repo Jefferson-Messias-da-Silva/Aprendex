@@ -34,6 +34,8 @@ public class Curso{
         this.duracao = duracao;
         this.valor = valor;
     }
+
+    public Curso(){}
     @Override
     public String toString() {
         return "Curso{" +

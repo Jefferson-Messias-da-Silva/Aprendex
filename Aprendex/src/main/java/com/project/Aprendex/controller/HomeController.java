@@ -4,10 +4,12 @@ import com.project.Aprendex.service.CursoService;
 import com.project.Aprendex.service.UsuarioService;
 import com.project.Aprendex.model.Curso;
 import com.project.Aprendex.model.Usuario;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping("/")
@@ -18,44 +20,46 @@ public class HomeController {
     private CursoService cursoService;
 
     @GetMapping("/")
-    public String home(ModelMap model) {
-
-        return "home";
+    public ModelAndView home() {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("home");
+        return mv;
     }
-
-
-
 
     @GetMapping("/sobre")
     public String sobre () {
 
-        return "home";
+        return "sobre";
     }
+
     @GetMapping("/cadastrar")
     public String cadastro() {
 
-
         return "cadastro";
     }
+
     @RequestMapping (value="/save",method=RequestMethod.POST)
     public String cadastrando(@ModelAttribute Usuario usuario) {
 
-
         this.usuarioService.cadastrar(usuario);
-
 
         return "redirect:";
     }
-    @RequestMapping (value="/logado",method=RequestMethod.POST)
-    public String logado(ModelMap model, String email, String senha) {
-
-        if(this.usuarioService.login(email,senha) == null){
-            return "redirect:login";
+    @PostMapping (value="/logado")
+    public ModelAndView logado(HttpSession session, Usuario usuario) {
+        ModelAndView mv = new ModelAndView();
+        mv.addObject("usuario", new Usuario());
+        Usuario userLogin = this.usuarioService.login(usuario.getEmail(), usuario.getSenha());
+        if(usuario == null){
+            mv.setViewName("/login");
         }else {
-            model.addAttribute(this.usuarioService.login(email, senha));
-            return "redirect:";
+            session.setAttribute("usuarioLogado",  userLogin);
+            return home();
         }
+
+        return mv;
     }
+
     @RequestMapping (value="/curso-cadastrado",method=RequestMethod.POST)
     public String cadastrocurso(Curso curso) {
         this.cursoService.cadastrarCurso(curso);
@@ -63,7 +67,6 @@ public class HomeController {
 
             return "redirect:";
     }
-
 
     @GetMapping("/login")
     public String login() {
@@ -73,10 +76,12 @@ public class HomeController {
 
     @GetMapping("/cursos")
     public String cursos(){
+
         return "telacurso";
     }
     @GetMapping("/cadastro-cursos")
     public String cadastrocursos(){
+
         return "cadastroCurso";
     }
 

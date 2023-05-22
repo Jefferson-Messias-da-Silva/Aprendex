@@ -13,12 +13,13 @@
       <nav class="FixoNoTopo">
         <img th:src="@{/imagem/logo01.png}" alt="Logo" class="logo">
         <ul class="menu">
+
           <li><a th:href="@{/}">Home</a></li>
           <li><a th:href="@{/cursos}">Cursos</a></li>
-          <li><a th:href="@{/login}">Login</a></li>
+          <li th:if="${usuario == null}"><a th:href="@{/login}">Login</a></li>
           <li><a th:href="@{/cadastrar}">Cadastre-se</a></li>
-          <li><a th:href="@{/}">Sobre</a></li>
-          <li><a th:href="@{/cadastro-cursos}">Cadastre seu Curso</a></li>
+          <li><a th:href="@{/sobre}">Sobre</a></li>
+          <li th:if="${usuario != null && usuario.tipo == 1}"><a th:href="@{/cadastro-cursos}">Cadastre seu Curso</a></li>
         </ul>
         <main>
           <div class="SearchBox active">
@@ -39,7 +40,7 @@
      <h1 class="frase">Sua plataforma onde contém todos os cursos disponíveis em Diadema </h1>
      <br>
      <header>
-      <a href="#" class="btn-2">Inscreva - se</a>
+      <a href="#" class="btn-2">Inscreva-se</a>
       <a href="#" class="btn-2">Explore os Cursos</a>
     </header>
     <br><br>
@@ -91,11 +92,11 @@
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <h6>Links rápidos</h6>
                 <div class="footer-links">
-                  <p><a href="">Home</a></p>
-                  <p><a href="">Cursos</a></p>
-                  <p><a href="">Login</a></p>
-                  <p><a href="">Cadastro Curso</a></p>
-                  <p><a href="">Sobre - nós</a></p>
+                  <p><a th:href="@{/}">Home</a></p>
+                  <p><a th:href="@{/cursos}">Cursos</a></p>
+                  <p><a th:href="@{/login}">Login</a></p>
+                  <p><a th:href="@{/cadastrar}">Cadastro</a></p>
+                  <p><a th:href="@{/sobre}">Sobre nós</a></p>
                 </div>
         </div> 
       </div>
