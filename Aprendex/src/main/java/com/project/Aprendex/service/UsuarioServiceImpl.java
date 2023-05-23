@@ -29,7 +29,7 @@ public class UsuarioServiceImpl implements UsuarioService{
 
     @Override
     public Usuario login(String email, String senha){
-        Usuario usuario = usuarioRepository.findByEmailAndSenha(email,senha);
+        Usuario usuario = usuarioRepository.findUsuarioByEmailAndSenha(email,senha);
         return usuario;
     }
     @Override

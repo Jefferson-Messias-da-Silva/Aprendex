@@ -16,10 +16,11 @@
 
           <li><a th:href="@{/}">Home</a></li>
           <li><a th:href="@{/cursos}">Cursos</a></li>
-          <li th:if="${usuario == null}"><a th:href="@{/login}">Login</a></li>
+          <li th:if="${session.usuarioLogado == null}"><a th:href="@{/login}">Login</a></li>
           <li><a th:href="@{/cadastrar}">Cadastre-se</a></li>
           <li><a th:href="@{/sobre}">Sobre</a></li>
-          <li th:if="${usuario != null && usuario.tipo == 1}"><a th:href="@{/cadastro-cursos}">Cadastre seu Curso</a></li>
+          <li th:if="${session.usuarioLogado != null && session.usuarioLogado.tipo == 1}"><a th:href="@{/cadastro-cursos}">Cadastre seu Curso</a></li>
+
         </ul>
         <main>
           <div class="SearchBox active">
@@ -31,9 +32,11 @@
         </main>
       </nav>
     <br>
+
     <div class="container">
      <br>
      <br>
+      <h1 th:text="${session.usuarioLogado.toString()}"></h1>
     <img th:src="@{/imagem/Principal.png}" alt="Formatura" class="formatura">
      <br>
      <h1>OLÁ, SEJA BEM-VINDO(A) AO APRENDEX</h1>

@@ -23,13 +23,16 @@ public class HomeController {
     public ModelAndView home() {
         ModelAndView mv = new ModelAndView();
         mv.setViewName("home");
+
         return mv;
     }
 
     @GetMapping("/sobre")
-    public String sobre () {
-
-        return "sobre";
+    public ModelAndView sobre () {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("sobre");
+        mv.addObject("usuario",new Usuario());
+        return mv;
     }
 
     @GetMapping("/cadastrar")
@@ -48,8 +51,10 @@ public class HomeController {
     @PostMapping (value="/logado")
     public ModelAndView logado(HttpSession session, Usuario usuario) {
         ModelAndView mv = new ModelAndView();
-        mv.addObject("usuario", new Usuario());
+
         Usuario userLogin = this.usuarioService.login(usuario.getEmail(), usuario.getSenha());
+        usuario=userLogin;
+        mv.addObject("usuario", usuario);
         if(usuario == null){
             mv.setViewName("/login");
         }else {
@@ -61,11 +66,12 @@ public class HomeController {
     }
 
     @RequestMapping (value="/curso-cadastrado",method=RequestMethod.POST)
-    public String cadastrocurso(Curso curso) {
+    public ModelAndView cadastrocurso(Curso curso) {
         this.cursoService.cadastrarCurso(curso);
-
-
-            return "redirect:";
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("cadastroCurso");
+        mv.addObject("usuario",new Usuario());
+        return mv;
     }
 
     @GetMapping("/login")
@@ -75,14 +81,18 @@ public class HomeController {
     }
 
     @GetMapping("/cursos")
-    public String cursos(){
-
-        return "telacurso";
+    public ModelAndView cursos(){
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("telacurso");
+        mv.addObject("usuario",new Usuario());
+        return mv;
     }
     @GetMapping("/cadastro-cursos")
-    public String cadastrocursos(){
-
-        return "cadastroCurso";
+    public ModelAndView cadastrocursos(){
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("cadastroCurso");
+        mv.addObject("usuario",new Usuario());
+        return mv;
     }
 
 }
