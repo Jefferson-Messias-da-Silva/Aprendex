@@ -36,7 +36,7 @@
     <div class="container">
      <br>
      <br>
-      <h1 th:text="${session.usuarioLogado.toString()}"></h1>
+      <h1 th:if="${session.usuarioLogado!=null}" th:text="${session.usuarioLogado.toString()}"></h1>
     <img th:src="@{/imagem/Principal.png}" alt="Formatura" class="formatura">
      <br>
      <h1>OLÁ, SEJA BEM-VINDO(A) AO APRENDEX</h1>

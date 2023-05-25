@@ -21,6 +21,8 @@ public class HomeController {
 
     @GetMapping("/")
     public ModelAndView home() {
+
+
         ModelAndView mv = new ModelAndView();
         mv.setViewName("home");
 
@@ -29,6 +31,7 @@ public class HomeController {
 
     @GetMapping("/sobre")
     public ModelAndView sobre () {
+
         ModelAndView mv = new ModelAndView();
         mv.setViewName("sobre");
         mv.addObject("usuario",new Usuario());

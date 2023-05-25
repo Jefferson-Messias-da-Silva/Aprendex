@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
   <head>
     <title>Página de Busca</title>
     <meta charset="UTF-8">
@@ -10,11 +10,15 @@
       <link rel="stylesheet" href="http:/resources/demos/style.css">
       <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
       <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+      <link rel="stylesheet" th:href="@{/css/usuarioFav.css}">
+      <script th:src="@{/js/usuarioFav.js}"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
     <script>
     $( function() {
       $( "#tabs" ).tabs();
     } );
     </script>
+
   </head>
 
   <body>
@@ -49,12 +53,18 @@
         </ul>
         <div id="tabs-1">
             <div id="tab0" class="tab-content">
-                <div class="planColumn">
-                  <h2>XXXXXXXXXX</h2>
+
+                    <div class="planColumn">
+
+                  <h2 >XXXXXXXXXX</h2>
                     <div class="planOptionDetailText">XXXXXXX</div>
                     <div class="planOptionDetailText">XXXXXXXXX</div>
                     <div class="planSignup"><a href="#" class="botao">Inscreva - se</a></div>
-                </div> 
+                        <button class="favorite-button" onclick="toggleFavorite()">
+                            <i class="fas fa-heart"></i>
+                            <span class="favorite-text">Favoritar</span></button>
+                    </div>
+
                 <div class="planColumn">
                   <h2>XXXXXXXXXX</h2>
                     <div class="planOptionDetailText">XXXXXXX</div>
