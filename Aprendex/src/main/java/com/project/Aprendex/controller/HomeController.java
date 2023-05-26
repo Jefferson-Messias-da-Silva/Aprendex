@@ -27,6 +27,13 @@ public class HomeController {
         mv.addObject("curso", new Curso());
         return mv;
     }
+    @GetMapping("/sair")
+    public  String sair(HttpSession session){
+        session.invalidate();
+
+        return "redirect:";
+    }
+
 
     @GetMapping("/sobre")
     public ModelAndView sobre () {
@@ -101,6 +108,7 @@ public class HomeController {
     public ModelAndView cursos(){
         ModelAndView mv = new ModelAndView();
         mv.setViewName("telacurso");
+        mv.addObject("listaCurso", cursoService.encontrarCategoria());
         mv.addObject("usuario",new Usuario());
         mv.addObject("curso",new Curso());
         return mv;

@@ -5,6 +5,7 @@ import com.project.Aprendex.repository.CursoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -48,4 +49,15 @@ public class CursoServiceImpl implements CursoService {
         List<Curso> curso = this.cursoRepository.findAll();
         return curso;
     }
+
+    @Override
+    public List<Curso> encontrarCategoria() {
+
+
+        List<Curso>listacategoria=cursoRepository.findAll();
+
+        return listacategoria;
+    }
+
+
 }

@@ -4,6 +4,7 @@ import com.project.Aprendex.model.Curso;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 @Service
@@ -19,5 +20,7 @@ public interface CursoService {
     public void deletaCurso(String id);
 
     public List<Curso> topCurso();
+
+    public List<Curso> encontrarCategoria();
 
 }
