@@ -21,11 +21,10 @@ public class HomeController {
 
     @GetMapping("/")
     public ModelAndView home() {
-
-
         ModelAndView mv = new ModelAndView();
         mv.setViewName("home");
-
+        mv.addObject("listaCurso", cursoService.topCurso());
+        mv.addObject("curso", new Curso());
         return mv;
     }
 
@@ -34,6 +33,21 @@ public class HomeController {
 
         ModelAndView mv = new ModelAndView();
         mv.setViewName("sobre");
+        mv.addObject("usuario",new Usuario());
+        return mv;
+    }
+
+    @GetMapping("/dadospessoais")
+    public ModelAndView dados(){
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("DadosPessoais");
+        mv.addObject("usuario",new Usuario());
+        return mv;
+    }
+    @GetMapping("/favoritos")
+    public ModelAndView favoritos(){
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("UsuarioFav");
         mv.addObject("usuario",new Usuario());
         return mv;
     }
@@ -88,6 +102,7 @@ public class HomeController {
         ModelAndView mv = new ModelAndView();
         mv.setViewName("telacurso");
         mv.addObject("usuario",new Usuario());
+        mv.addObject("curso",new Curso());
         return mv;
     }
     @GetMapping("/cadastro-cursos")

@@ -3,44 +3,23 @@
 body {
   margin: 0;
   font-family: Verdana;
-  background-color: #d9d9d9;
+  background-color: #f6f9fa;
 }
 
 nav {
+  height: 90px; /* Ajuste o valor conforme necessário */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: black;
+  background-color: #171a21;
   border-style: solid;
   border-bottom-width: 5px;
   border-top-width: 0;
   border-left-width: 0;
   border-color: #fff;
+}
 
-}
-.telacurso{
-  font-family: Candara;
-  font-size: 50px;
-  color: black;
-  text-align: center;
-  margin-top:5%;
-}
-.lis{
-  font-family: Candara;
-  font-size: 20px;
-  color: black;
-  text-align: center;
-}
-.botao{
-  background-color: #09356f;
-  border-radius: 2.5em;
-  color: #fff;
-  display: block;
-  margin-top: 1em;
-  padding: 0.375em 1.5em;
-  text-decoration: none;
-  text-transform: uppercase;
-}
+
 .FixoNoTopo + .principal{
   padding-top: 60px;
 }
@@ -48,48 +27,53 @@ nav {
 
 .FixoNoTopo{
   position: fixed;
-  top: 0px;
+  top: 0;
+  left: 0;
   width: 100%;
-  z-index: 3000;
-
+  z-index: 9999;
 }
 
 .logo {
-  width: 100px;
+  width: 120px;
   margin-left: 25px;
 }
 
 .formatura{
     float: right;
-    margin-left: 10px; /* opcional, para adicionar um espaço entre a imagem e o texto */
   }
   
 .menu {
   list-style: none;
   display: flex; 
   margin-right: 105px;
+  position: relative; /* Adicione essa linha */
+  z-index: 2; 
+
 
 }
 .menu li {
   margin-left: 20px;
+
 }
 .menu a {
   text-decoration: none;
-  color: #ff7a00;
+  color: white;
   font-size: 1.2rem;
   padding: 5px;
   transition: all 0.3s ease-in-out;
+
 }
 
 .menu a:hover {
   background-color: #fff;
   color: #333;
   border-radius: 5px;
+ 
 }
 
 .container {
   max-width: 1100px;
-  margin: 0 auto;
+  margin: auto;
   padding: 50px;
   background-color: transparent;
   border-radius: 5px;
@@ -102,7 +86,11 @@ h1 {
 }
 .frase{
   font-family: Candara;
+  color: white;
   font-size: 50px;
+}
+.bemvindo{
+  color: #00aced;
 }
 p{
   font-family: Candara;
@@ -112,34 +100,45 @@ p{
 .alta{
   font-family: Candara;
   font-size: 40px;
+  color: #3366cc;
   text-align: center;
 }
 #sobre-nos {
   font-family: Candara;
   font-size: 30px;
-  color: #ff7a00;
+  color: black;
 }
-.paragrafo2{
+.texto2{
   font-size: 28px;
+  text-align: justify;
+}
+.texto3{
+  font-size: 20px;
+}
+
+.textdestaq{
+  font-size: 32px;
+  color: #3366cc;
+  text-align: center;
 }
 
 
 header a {
   text-decoration: none;
-  background-color: #09356f; /* cor do botao inicial */
+  background-color:#171a21; /* cor do botao inicial */
   display: inline-block;
   padding:15px 15px; /* cor do botao inicial */
   margin:10px 10px;
-  border:1px solid black;
+  border:1px solid #171a21;
   border-radius:5px;
-  box-shadow: 0 2px 3px black;
+  box-shadow: 0 2px 3px #171a21;
   color: white; /* cor da letra */
   }
 
 header a:hover {
-  background-color: #09356f; 
+  background-color: #171a21; 
   color: white;
-  box-shadow: 0 2px 3px black;
+  box-shadow: 0 2px 3px ;
   }
 
 @keyframes btn2 {
@@ -160,15 +159,17 @@ header a:hover {
 	}
 }
 .btn-2 {
-	transition: .5s;
+	transition: .3s; /* Reduzido para 0.3 segundos */
 }
+
 .btn-2:hover {
 	animation-name: btn2;
-	animation-delay: .5s;
-	animation-duration: .5s;
+	animation-delay: .3s; /* Reduzido para 0.3 segundos */
+	animation-duration: .3s; /* Reduzido para 0.3 segundos */
 	animation-timing-function: linear;
-	animation-iteration-count: 1
+	animation-iteration-count: 1;
 }
+
 
 .btn-2{
   font-size: 20px;
@@ -193,7 +194,7 @@ header a:hover {
 /* Busca  */
 :root {
 	--primary-color: white;
-	--accent-color: #ff7a00;
+	--accent-color:#66c0f4;
 	--text-color: #263238;
   }
   
@@ -325,50 +326,7 @@ header a:hover {
 	}
   }
 
-/* Caixa de curso*/
-#tab0 {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  padding: 2em;
-}
 
-.planColumn {
-  margin-right: 4%;
-}
-
-#tab0 > div {
-  background-color: #fff;
-  border-radius: .25em;
-  box-shadow: 0px 5px 10px 2px rgba(0,0,0,.15);
-  line-height: 1.6em;
-  padding: 2em;
-  text-align: center;
-}
-
-.btn-orange {
-  background-color: #09356f; 
-  border-radius: 2.5em;
-  color: #fff;
-  display: block;
-  margin-top: 1em;
-  padding: .375em 1.5em;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-@media (max-width: 400px) {
-  #tab0 {
-    flex-direction: column;
-    justify-content: center;
-    padding: 0;
-  }
-
-  .planColumn {
-    margin-right: 0;
-    margin-bottom: 2em;
-  }
-}
   
 /* Rodapé*/
 .site-footer {
@@ -512,8 +470,3 @@ header a:hover {
     font-weight: 600;
   }
 }
-
-
-
-  
-  

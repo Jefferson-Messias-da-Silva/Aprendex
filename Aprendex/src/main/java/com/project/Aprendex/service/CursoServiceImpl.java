@@ -1,10 +1,11 @@
 package com.project.Aprendex.service;
 
-import com.project.Aprendex.model.Curso;
+import com.project.Aprendex.model.*;
 import com.project.Aprendex.repository.CursoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -39,6 +40,12 @@ public class CursoServiceImpl implements CursoService {
     @Override
     public Curso encontrarId(String id) {
         Curso curso = this.cursoRepository.findCursoById(id);
+        return curso;
+    }
+
+    @Override
+    public List<Curso> topCurso(){
+        List<Curso> curso = this.cursoRepository.findAll();
         return curso;
     }
 }

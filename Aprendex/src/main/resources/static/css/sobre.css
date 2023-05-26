@@ -10,14 +10,15 @@
     font-size: 30px;
     color: #09356F;
     margin-left: 50px; /*cuidado com isso aqui, estava dando erro*/
+    text-align: center;
 }
 
 .imgbonecos{
     float: right;
     margin-top: 20px;
-    margin-left: 10px; /* opcional, para adicionar um espaço entre a imagem e o texto */
-    width: 280px;
-    height: 250px;
+    margin-left: 50px; /* opcional, para adicionar um espaço entre a imagem e o texto */
+    width: 300px;
+    height: 300px;
   }
 
 .imgconfig{
@@ -27,6 +28,12 @@
     width: 220px;
     height: 180px;
   }
+.imgmvv{
+    text-align: center;
+    margin-left: 200px; /* opcional, para adicionar um espaço entre a imagem e o texto */
+    width: 650px;
+    height: 650px;
+}
 
 .container {
     max-width: 1100px;

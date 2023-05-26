@@ -1,11 +1,15 @@
 package com.project.Aprendex.model;
 
+
 import jakarta.persistence.*;
+import jdk.jfr.DataAmount;
 import lombok.Data;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.Date;
+
 @Data
-@Document
+@Document(collection="Cursos")
 public class Curso{
 
     @Id
@@ -20,8 +24,9 @@ public class Curso{
     private String telefone;
     private String email;
     private Double valor;
+    private String img;
 
-    public Curso(String id, String nome, String descricao, String link, String endereco, String instituicao,String categoria,String telefone, String email, int duracao, Double valor) {
+    public Curso(String id, String nome, String descricao, String link, String endereco, String instituicao,String categoria,String telefone, String email, int duracao, Double valor, String img) {
         this.id = id;
         this.nome = nome;
         this.descricao = descricao;
@@ -33,6 +38,7 @@ public class Curso{
         this.email = email;
         this.duracao = duracao;
         this.valor = valor;
+        this.img = img;
     }
 
     public Curso(){}
@@ -47,6 +53,7 @@ public class Curso{
                 ", instituicao='" + instituicao + '\'' +
                 ", categoria='" + categoria + '\'' +
                 ", valor=" + valor +
+                ", imagem=" + img +
                 '}';
     }
 }

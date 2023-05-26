@@ -8,12 +8,11 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-
-    background: #3990C2;
+    background: #d9d9d9;
 }
 
 .login{
-    background: #09356F;
+    background: #2a475e;
     border-radius: 10px;
     width: 400px;
     padding: 40px;
@@ -178,4 +177,10 @@ body{
     .login{
         width: 90%;
     }
+}
+
+.logo-login{
+    width: 150px;
+    right: 100px;
+    margin-left: 90px;
 }

@@ -5,6 +5,8 @@ import jdk.jfr.DataAmount;
 import lombok.Data;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.Date;
+
 @Data
 @Document(collection="Usuarios")
 public class Usuario {
@@ -19,7 +21,8 @@ public class Usuario {
     private String senha;
     private String email;
     private Integer tipo;
-    public Usuario(String id, String nome, String sobrenome, String login, String senha, String email, Integer tipo) {
+    private Date dtnascimento;
+    public Usuario(String id, String nome, String sobrenome, String login, String senha, String email, Integer tipo, Date dtnascimento) {
         this.id = id;
         this.nome = nome;
         this.sobrenome = sobrenome;
@@ -27,6 +30,7 @@ public class Usuario {
         this.senha = senha;
         this.email = email;
         this.tipo = tipo;
+        this.dtnascimento = dtnascimento;
     }
 
     public Usuario() {
@@ -43,6 +47,7 @@ public class Usuario {
                 ", senha='" + senha + '\'' +
                 ", email='" + email + '\'' +
                 ", tipo=" + tipo +
+                ", data de nascimento=" + dtnascimento +
                 '}';
     }
 }

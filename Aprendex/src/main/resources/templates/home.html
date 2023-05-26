@@ -3,122 +3,73 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="shortcut icon" th:href="@{/imagem/favicon-32x32.png}" type="image/x-icon">
     <link rel="stylesheet" th:href="@{/css/home.css}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" th:href="@{/css/carrosel.css}">
+    <script th:src="@{/js/carrosel.js}"></script>
+    <script th:src="@{/js/menufixo.js}"></script>
+    <link rel="stylesheet" th:href="@{/css/wave.css}">
+    <link rel="stylesheet" th:href="@{/css/UsuarioFav.css}">
     <title>Home</title>
   </head>
-
   <body>
-      <nav class="FixoNoTopo">
-        <img th:src="@{/imagem/logo01.png}" alt="Logo" class="logo">
-        <ul class="menu">
-
-          <li><a th:href="@{/}">Home</a></li>
-          <li><a th:href="@{/cursos}">Cursos</a></li>
-          <li th:if="${session.usuarioLogado == null}"><a th:href="@{/login}">Login</a></li>
-          <li><a th:href="@{/cadastrar}">Cadastre-se</a></li>
-          <li><a th:href="@{/sobre}">Sobre</a></li>
-          <li th:if="${session.usuarioLogado != null && session.usuarioLogado.tipo == 1}"><a th:href="@{/cadastro-cursos}">Cadastre seu Curso</a></li>
-
-        </ul>
-        <main>
-          <div class="SearchBox active">
-            <input type="text" class="SearchBox-input" placeholder="Procure seu curso">
-            <button class="SearchBox-button">
-              <i class="SearchBox-icon  material-icons">search</i>
-            </button>
-          </div>
-        </main>
-      </nav>
+  <nav th:replace="menu::menu" >
+  </nav>
     <br>
-
     <div class="container">
      <br>
      <br>
-      <h1 th:if="${session.usuarioLogado!=null}" th:text="${session.usuarioLogado.toString()}"></h1>
-    <img th:src="@{/imagem/Principal.png}" alt="Formatura" class="formatura">
+    <img th:src="@{/imagem/icone.png}" alt="Formatura" class="formatura">
      <br>
-     <h1>OLÁ, SEJA BEM-VINDO(A) AO APRENDEX</h1>
+     <h1 class="bemvindo">OLÁ, SEJA BEM-VINDO(A) AO APRENDEX</h1>
      <h1 class="frase">Sua plataforma onde contém todos os cursos disponíveis em Diadema </h1>
      <br>
      <header>
-      <a href="#" class="btn-2">Inscreva-se</a>
+      <a href="#" class="btn-2">Inscreva - se</a>
       <a href="#" class="btn-2">Explore os Cursos</a>
     </header>
-    <br><br>
-
-    <section id="sobre-nos">
-    <h2 class="paragrafo2">Já imaginou ter os melhores cursos da cidade em um único lugar?</h2>
-    <h2>AQUI NO  APRENDEX VOCÊ TEM!!!</h2>
-  </section>
-    <p>Pensando em facilitarmos sua vida, nós juntamos (todos os cursos gratuitos/os melhores cursos) da região para te ajudar em sua busca por conhecimento!
-    </p>
     <br>
-    <p>Abaixo, selecionamos os cursos mais procurados em nosso site:</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <section id="sobre-nos">
+      <p class="textdestaq">
+        TEMOS O PRAZER DE APRESENTAR UMA SOLUÇÃO QUE VISA FACILITAR E AGILIZAR A SUA BUSCA POR CONHECIMENTO NA REGIÃO!
+      </p>
+      <p class="texto2">
+      Reunimos, cuidadosamente, todos os cursos gratuitos e os melhores cursos disponíveis, a fim de fornecer uma plataforma abrangente para atender às suas necessidades educacionais.
+      Acreditamos que o acesso à informação é essencial para o crescimento pessoal e profissional, e é por isso que nos dedicamos a oferecer uma seleção diversificada e atualizada de cursos
+      Esperamos que essa compilação seja um recurso valioso para impulsionar a sua jornada de conhecimento.
+      Abaixo, destacamos uma lista dos cursos mais procurados em nosso site, que têm despertado grande interesse entre os usuários em busca de aprendizado e desenvolvimento de habilidades.</p>
     </section>
     <br>
-    <h1 class="alta"> Cursos em alta </h1>
-    <div id="tab0" class="tab-content">
-      <div class="planColumn">
-        <h2>XXXXXXXXXX</h2>
-          <div class="planOptionDetailText">XXXXXXX</div>
-          <div class="planOptionDetailText">XXXXXXXXX</div>
-          <div class="planSignup"><a href="#" class="btn-orange">Inscreva - se</a></div>
-      </div> 
-      <div class="planColumn">
-        <h2>XXXXXXXXXX</h2>
-          <div class="planOptionDetailText">XXXXXXX</div>
-          <div class="planOptionDetailText">XXXXXXXXX</div>
-          <div class="planSignup"><a href="#" class="btn-orange">Inscreva - se</a></div>
-      </div>
-      <div class="planColumn">
-        <h2>XXXXXXXXXX</h2>
-          <div class="planOptionDetailText">XXXXXXX</div>
-          <div class="planOptionDetailText">XXXXXXXXX</div>
-          <div class="planSignup"><a href="#" class="btn-orange">Inscreva - se</a></div>
-      </div>
-  </div>
-  </div>
-      </div>
-      <hr>
+    <h1 class="alta"> CURSOS EM ALTA </h1>
+    <div class="carousel-container">
+      <div id="tab0" class="tab-content">
 
-  <!-- Site footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12 col-md-6">
-          <h6 id="sobre">Sobre </h6>
-          <p class="text-justify">aaaaaaaaaaaa</p>
+        <div th:each="curso : ${listaCurso}" class="carousel-item">
+          <h2 th:text="${curso.nome}"></h2>
+          <p th:text="${curso.descricao}"></p>
+          <p th:text="'Instituição: ' + ${curso.instituicao}"></p>
+          <a th:href="${curso.link}" target='_blank' class="btn-orange">Inscreva-se</a>
         </div>
-        <div class="col-xs-6 col-md-3">
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <h6>Links rápidos</h6>
-                <div class="footer-links">
-                  <p><a th:href="@{/}">Home</a></p>
-                  <p><a th:href="@{/cursos}">Cursos</a></p>
-                  <p><a th:href="@{/login}">Login</a></p>
-                  <p><a th:href="@{/cadastrar}">Cadastro</a></p>
-                  <p><a th:href="@{/sobre}">Sobre nós</a></p>
-                </div>
-        </div> 
-      </div>
-      </div>
-      <hr>
-
-    <div class="col-md-4 col-sm-6 col-xs-12">
-        <ul class="social-icons">
-          <li><a class="instragram" href="#"><img th:src="@{/imagem/icons8-instagram-50.png}" alt="Instragram"></a></li>
-          <li><a class="twitter" href="#"><img th:src="@{/imagem/twitter.png}" alt="Twitter"></a></li>
-          <li><a class="internet" href="#"><img th:src="@{/imagem/internet.png}" alt="Internet"></a></li>
-          <li><a class="mensagem" href="#"><img th:src="@{/imagem/icons8-mensagem-50.png}" alt="Mensagem"></a></li>
-          <li><a class="telefone" href="#"><img th:src="@{/imagem/icons8-telefone-50.png}" alt="Telefone"></a></li>
-        </ul>
-      </div>
-      
       </div>
     </div>
-</footer>
-<script th:src="@{/js/script.js}"></script>
+    <br>
+    <br>
+    <br>
+    <br>
+  </div>
+  <hr>
+  </div>
+    </div>
+  <footer  th:replace="rodape::rodape">
+  </footer>>
   </body>
 </html>

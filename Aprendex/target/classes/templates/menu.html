@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<nav th:fragment="menu" class="FixoNoTopo">
+  <img th:src="@{/imagem/logo01.png}" alt="Logo" class="logo">
+  <p class="nome-usuario"></p>
+  <ul class="menu">
+    <li><a th:href="@{/}">Home</a></li>
+    <li><a th:href="@{/cursos}">Cursos</a></li>
+    <li><a th:href="@{/login}">Login</a></li>
+    <li><a th:href="@{/cadastrar}">Cadastre-se</a></li>
+    <li><a th:href="@{/dadospessoais}">Dados Pessoais</a></li>
+    <li><a th:href="@{/favoritos}">Meus favoritos</a></li>
+    <li><a th:href="@{/sobre}">Sobre</a></li>
+    <li><a th:href="@{/cadastro-cursos}">Cadastre seu Curso</a></li>
+
+    <li><button class="botao-sair"><i class="fas fa-sign-out-alt"></i> Sair</button></li>
+  </ul>
+  <main>
+    <div class="SearchBox active">
+      <input type="text" class="SearchBox-input" placeholder="Procure seu curso">
+      <button class="SearchBox-button">
+        <i class="SearchBox-icon  material-icons">search</i>
+      </button>
+    </div>
+  </main>
+</nav>
+</body>
+</html>
