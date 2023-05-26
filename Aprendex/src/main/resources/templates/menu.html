@@ -7,7 +7,7 @@
 <body>
 <nav th:fragment="menu" class="FixoNoTopo">
   <img th:src="@{/imagem/logo01.png}" alt="Logo" class="logo">
-  <p class="nome-usuario"></p>
+  <p th:if="${session.usuarioLogado!=null}" th:text="'Olá, ' + ${session.usuarioLogado.getNome()}" class="nome-usuario"></p>
   <ul class="menu">
     <li><a th:href="@{/}">Home</a></li>
     <li><a th:href="@{/cursos}">Cursos</a></li>
