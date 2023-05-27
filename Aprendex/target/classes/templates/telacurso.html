@@ -17,23 +17,21 @@
     $( function() {
       $( "#tabs" ).tabs();
     } );
-
-
     </script>
   </head>
   <body>
   <nav th:replace="~{menu::menu}" >  </nav>
   <br>
     <h1 class="telacurso"> Todos dos Cursos </h1>
+    <form th:action="@{/cursos}" method="post">
     <div id="tabs" >
         <ul>
-            <li  class="lis" th:each="categor : ${listaCategoria}" th:with="cat=${categor.toString()}">
-                <a  href="#tabs-1" ></a>
-                <a th:text="${categor.toString()}"></a>
+            <li  class="lis" th:each="categor : ${listaCategoria}">
+                <input id="categoria" name="categoria" type="submit" href="#tabs-1" th:value="${categor.toString()}">
             </li>
-
         </ul>
-
+        </div>
+        </form>
         <div  id="tabs-1">
             <div id="tab0" class="tab-content" >
                 <div  th:each="curso:${listaCurso}"  class="planColumn">

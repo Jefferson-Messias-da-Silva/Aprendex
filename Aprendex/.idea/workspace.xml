@@ -5,22 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="943894bb-8af7-42bf-914e-4f2eee3b6805" name="Changes" comment="fodase">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/busca.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/busca.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/repository/CursoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/repository/CursoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/service/CursoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/service/CursoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/service/CursoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/service/CursoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/model/Curso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/model/Curso.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/cursos.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/cursos.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cadastroCurso.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cadastroCurso.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/menu.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/telacurso.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/telacurso.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/Aprendex/Repository/CursoRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/Aprendex/Repository/CursoRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/Aprendex/Service/CursoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/Aprendex/Service/CursoService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/Aprendex/Service/CursoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/Aprendex/Service/CursoServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/project/Aprendex/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/Aprendex/controller/HomeController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/project/Aprendex/model/Curso.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/Aprendex/model/Curso.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/home.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/menu.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/telacurso.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/telacurso.html" afterDir="false" />
     </list>

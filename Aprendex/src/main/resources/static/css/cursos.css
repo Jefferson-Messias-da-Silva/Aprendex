@@ -1,3 +1,27 @@
+.lis{
+    margin: 5%;
+    width: auto;
+    height: auto;
+    background-color: #ffffff;
+    font-family: Candara;
+}
+
+.lis:hover{
+    background-color: #969696;
+    font-size: 125%;
+    cursor: pointer;
+}
+.lis:active{
+    background-color: #00aced;
+}
+#categoria{
+    font-family: Candara;
+    font-size: 24px;
+}
+#categoria:hover{
+    font-size: 125%;
+    cursor: pointer;
+}
 
 #tab0 {
     display: flex;

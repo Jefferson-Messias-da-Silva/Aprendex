@@ -104,18 +104,18 @@ public class HomeController {
         return "login";
     }
 
-    @GetMapping("/cursos")
-    public ModelAndView cursos(){
+    @RequestMapping("/cursos")
+    public ModelAndView cursos(String categoria){
         ModelAndView mv = new ModelAndView();
         mv.setViewName("telacurso");
         mv.addObject("listaCategoria", cursoService.encontrarCategoria());
-
+        mv.addObject("listaCurso", cursoService.cursodaCategoria(categoria));
         mv.addObject("usuario",new Usuario());
         mv.addObject("curso",new Curso());
         return mv;
     }
 
-    @GetMapping (value = "/cursos/{categoria}")
+    /*@GetMapping (value = "/cursos")
 
     public ModelAndView categoria(@PathVariable String categoria){
         ModelAndView mv = new ModelAndView();
@@ -125,7 +125,7 @@ public class HomeController {
         mv.addObject("curso",new Curso());
         mv.setViewName("telacurso");
         return mv;
-    }
+    }*/
 
 
 
