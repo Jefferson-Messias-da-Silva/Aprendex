@@ -9,16 +9,15 @@
   <img th:src="@{/imagem/logo01.png}" alt="Logo" class="logo">
   <p th:if="${session.usuarioLogado!=null}" th:text="'Olá, ' + ${session.usuarioLogado.getNome()}" class="nome-usuario"></p>
   <ul class="menu">
-    <li><a th:href="@{/}">Home</a></li>
-    <li><a th:href="@{/cursos}">Cursos</a></li>
-    <li><a th:if="${session.usuarioLogado==null}" th:href="@{/login}">Login</a></li>
-    <li><a th:if="${session.usuarioLogado==null}" th:href="@{/cadastrar}">Cadastre-se</a></li>
-    <li><a th:if="${session.usuarioLogado!=null}" th:href="@{/dadospessoais}">Dados Pessoais</a></li>
-    <li><a th:if="${session.usuarioLogado!=null}" th:href="@{/favoritos}">Meus favoritos</a></li>
-    <li><a th:href="@{/sobre}">Sobre</a></li>
-    <li><a th:if="${session.usuarioLogado!=null && session.usuarioLogado.getTipo()==1}" th:href="@{/cadastro-cursos}">Cadastre seu Curso</a></li>
-
-    <li ><a th:href="@{/sair}"><button type="submit" th:if="${session.usuarioLogado!=null}" class="botao-sair" ><i class="fas fa-sign-out-alt"></i> Sair</button></a></li>
+    <li ><a th:href="@{/}">Home</a></li>
+    <li ><a th:href="@{/cursos}">Cursos</a></li>
+    <li th:if="${session.usuarioLogado==null}"><a th:href="@{/login}">Login</a></li>
+    <li th:if="${session.usuarioLogado==null}"><a th:href="@{/cadastrar}">Cadastre-se</a></li>
+    <li th:if="${session.usuarioLogado!=null}"><a th:href="@{/dadospessoais}">Dados Pessoais</a></li>
+    <li th:if="${session.usuarioLogado!=null}"><a th:href="@{/favoritos}">Meus favoritos</a></li>
+    <li ><a th:href="@{/sobre}">Sobre</a></li>
+    <li th:if="${session.usuarioLogado!=null && session.usuarioLogado.getTipo()==1}"><a th:href="@{/cadastro-cursos}">Cadastre seu Curso</a></li>
+    <li th:if="${session.usuarioLogado!=null}"><a th:href="@{/sair}"><button type="submit"  class="botao-sair" ><i class="fas fa-sign-out-alt"></i> Sair</button></a></li>
   </ul>
   <main>
     <div class="SearchBox active">
