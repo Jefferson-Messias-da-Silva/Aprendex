@@ -446,6 +446,10 @@ header a:hover {
 .social-icons a.instragram:hover {
   background-color: #e2725b;
 }
+#busca{
+    background-color: transparent;
+    text-decoration: none;
+}
 
 .social-icons a.twitter:hover {
   background-color: #00aced;

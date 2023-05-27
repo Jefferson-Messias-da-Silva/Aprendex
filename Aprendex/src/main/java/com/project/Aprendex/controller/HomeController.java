@@ -138,4 +138,15 @@ public class HomeController {
         return mv;
     }
 
+    @RequestMapping(value = "/buscar")
+    public ModelAndView buscar(String buscar){
+        ModelAndView mv = new ModelAndView();
+        mv.addObject("listaCurso", cursoService.encontrarCurso(buscar));
+        mv.addObject("usuario",new Usuario());
+        mv.addObject("curso",new Curso());
+        mv.setViewName("busca");
+
+        return mv;
+    }
+
 }

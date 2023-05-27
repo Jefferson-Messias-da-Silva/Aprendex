@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/busca.css}">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="http:/resources/demos/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Cursos</title>
+</head>
+<body>
+    <nav th:replace="~{menu::menu}" >  </nav>
+    <br>
+      <h1 class="cursosBusca"> Cursos</h1>
+          <div  id="tabs-1">
+              <div id="tab0" class="tab-content">
+                  <div th:each="curso:${listaCurso}" class="planColumn">
+                    <h2 th:text="${curso.nome} "></h2>
+                      <div class="planOptionDetailText">XXXXXXX</div>
+                      <div class="planOptionDetailText">XXXXXXXXX</div>
+                      <div class="planSignup"><button href="#" class="btn-orange">Inscreva - se</button></div>
+                      <button class="favorite-button" onclick="toggleFavorite()">
+                          <i class="fas fa-heart"></i>
+                          <span class="favorite-text">Favoritar</span>
+                      </button>
+                  </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+</body>
+</html>

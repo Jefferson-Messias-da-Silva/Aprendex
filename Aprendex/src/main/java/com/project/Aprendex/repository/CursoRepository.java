@@ -12,7 +12,7 @@ import java.util.Optional;
 @Repository
 public interface CursoRepository extends MongoRepository<Curso, String> {
 
-    Optional<Curso> findByNomeLikeIgnoreCase(String nome);
+    List<Curso> findByNomeLikeIgnoreCase(String nome);
 
     Optional<Curso> findByDescricaoLikeIgnoreCase(String descricao);
 
@@ -31,5 +31,7 @@ public interface CursoRepository extends MongoRepository<Curso, String> {
     List<String> findDistinctCategories();
 
     List<Curso> findByCategoria(String categoria);
+
+
 
 }

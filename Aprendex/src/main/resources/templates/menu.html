@@ -20,12 +20,13 @@
     <li th:if="${session.usuarioLogado!=null}"><a th:href="@{/sair}"><button type="submit"  class="botao-sair" ><i class="fas fa-sign-out-alt"></i> Sair</button></a></li>
   </ul>
   <main>
+    <form th:action="@{/buscar}" method="post">
     <div class="SearchBox active">
-      <input type="text" class="SearchBox-input" placeholder="Procure seu curso">
-      <button class="SearchBox-button">
+      <input type="text" id="buscar" class="SearchBox-input" name="buscar" placeholder="Procure seu curso" >
+      <button  id="busca" type="submit" class="SearchBox-button" style="text-decoration: none">
         <i class="SearchBox-icon  material-icons">search</i>
       </button>
-    </div>
+    </div></form>
   </main>
 </nav>
 </body>

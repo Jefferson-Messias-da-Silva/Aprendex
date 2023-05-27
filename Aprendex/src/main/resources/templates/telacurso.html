@@ -29,15 +29,15 @@
         <ul>
             <li  class="lis" th:each="categor : ${listaCategoria}" th:with="cat=${categor.toString()}">
                 <a  href="#tabs-1" ></a>
-                <a th:href="@{/cursos/{ct}(ct=${categor.toString()})}" th:text="${categor.toString()}"></a>
+                <a th:text="${categor.toString()}"></a>
             </li>
 
         </ul>
 
         <div  id="tabs-1">
-            <div id="tab0" class="tab-content">
-                <div    class="planColumn">
-                  <h2 ></h2>
+            <div id="tab0" class="tab-content" >
+                <div  th:each="curso:${listaCurso}"  class="planColumn">
+                  <h2 th:text="${curso.nome}" ></h2>
                     <div class="planOptionDetailText">XXXXXXX</div>
                     <div class="planOptionDetailText">XXXXXXXXX</div>
                     <div class="planSignup"><button href="#" class="btn-orange">Inscreva - se</button></div>

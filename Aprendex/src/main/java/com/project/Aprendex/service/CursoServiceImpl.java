@@ -65,7 +65,12 @@ public class CursoServiceImpl implements CursoService {
         return cursos;
     }
 
+    @Override
+    public List<Curso> encontrarCurso(String nome) {
+        List<Curso> cursobuscado=this.cursoRepository.findByNomeLikeIgnoreCase(nome);
 
+        return cursobuscado;
+    }
 
 
 }
