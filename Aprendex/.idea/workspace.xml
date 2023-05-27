@@ -6,19 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="943894bb-8af7-42bf-914e-4f2eee3b6805" name="Changes" comment="adicionado sair da sessão e cursos em destaque">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/model/Curso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/model/Curso.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/repository/CursoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/repository/CursoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/repository/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/repository/UsuarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/service/CursoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/service/CursoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/service/CursoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/service/CursoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/service/UsuarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/service/UsuarioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/service/UsuarioServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/cursos.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/cursos.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/Aprendex/Repository/CursoRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/Aprendex/Repository/CursoRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/Aprendex/Service/CursoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/Aprendex/Service/CursoService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/Aprendex/Service/CursoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/Aprendex/Service/CursoServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/telacurso.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/telacurso.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/Aprendex/Service/UsuarioServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/Aprendex/Service/UsuarioServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/project/Aprendex/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/Aprendex/controller/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/DadosPessoais.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/DadosPessoais.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/UsuarioFav.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/UsuarioFav.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/cadastro.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/cadastro.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/cadastroCurso.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/cadastroCurso.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/sobre.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/sobre.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/telacurso.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/telacurso.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

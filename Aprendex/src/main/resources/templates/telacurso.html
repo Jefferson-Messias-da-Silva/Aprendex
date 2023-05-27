@@ -17,19 +17,24 @@
     $( function() {
       $( "#tabs" ).tabs();
     } );
+
+
     </script>
   </head>
   <body>
   <nav th:replace="~{menu::menu}" >  </nav>
   <br>
     <h1 class="telacurso"> Todos dos Cursos </h1>
-    <div id="tabs">
+    <div id="tabs" >
         <ul>
-          <li class="lis" th:each="curso : ${listaCurso}" ><a href="#tabs-1" th:text="${curso.categoria}"> </a></li>
+            <li class="lis" th:each="categor : ${listaCategoria}" >
+                <a th:id="cat" href="#tabs-1" th:text="${categor.toString()}" th:value="${categor.toString()}"> </a>
+            </li>
         </ul>
+
         <div  id="tabs-1">
             <div id="tab0" class="tab-content">
-                <div th:each="curso : ${listaCurso}" class="planColumn">
+                <div th:each="curso : ${listaCurso}" th:  class="planColumn">
                   <h2 th:text="${curso.nome}"></h2>
                     <div class="planOptionDetailText">XXXXXXX</div>
                     <div class="planOptionDetailText">XXXXXXXXX</div>

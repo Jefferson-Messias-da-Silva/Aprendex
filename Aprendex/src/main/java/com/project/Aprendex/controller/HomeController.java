@@ -108,7 +108,8 @@ public class HomeController {
     public ModelAndView cursos(){
         ModelAndView mv = new ModelAndView();
         mv.setViewName("telacurso");
-        mv.addObject("listaCurso", cursoService.encontrarCategoria());
+        mv.addObject("listaCategoria", cursoService.encontrarCategoria());
+        mv.addObject("listaCurso", cursoService.topCurso());
         mv.addObject("usuario",new Usuario());
         mv.addObject("curso",new Curso());
         return mv;

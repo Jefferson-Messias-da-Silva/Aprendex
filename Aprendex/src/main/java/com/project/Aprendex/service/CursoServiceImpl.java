@@ -51,10 +51,10 @@ public class CursoServiceImpl implements CursoService {
     }
 
     @Override
-    public List<Curso> encontrarCategoria() {
+    public List<String> encontrarCategoria() {
 
 
-        List<Curso>listacategoria=cursoRepository.findAll();
+        List<String>listacategoria=this.cursoRepository.findDistinctCategories();
 
         return listacategoria;
     }

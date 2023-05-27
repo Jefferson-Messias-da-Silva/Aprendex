@@ -35,9 +35,7 @@ public class UsuarioServiceImpl implements UsuarioService{
     @Override
     public boolean encontrarEmail(Usuario usuario){
         Optional<Usuario> existEmail = this.usuarioRepository.findByEmail(usuario.getEmail());
-        if(existEmail.isPresent())
-            return false;
-        return true;
+        return existEmail.isEmpty();
     }
 
     @Override
@@ -46,9 +44,6 @@ public class UsuarioServiceImpl implements UsuarioService{
         int validar = email.indexOf("@");
 
         System.out.println(validar);
-        if(validar>0){
-            return true;
-        }
-        return false;
+        return validar > 0;
     }
 }

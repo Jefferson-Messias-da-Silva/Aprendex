@@ -21,6 +21,6 @@ public interface CursoService {
 
     public List<Curso> topCurso();
 
-    public List<Curso> encontrarCategoria();
+    public List<String> encontrarCategoria();
 
 }

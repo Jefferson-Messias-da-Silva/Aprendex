@@ -5,11 +5,11 @@ import org.springframework.stereotype.Service;
 
 @Service
 public interface UsuarioService{
-    public Usuario cadastrar(Usuario usuario);
+    Usuario cadastrar(Usuario usuario);
 
-    public boolean encontrarEmail(Usuario usuario);
+    boolean encontrarEmail(Usuario usuario);
 
-    public boolean validaEmail(Usuario usuario);
+    boolean validaEmail(Usuario usuario);
 
-    public Usuario login(String email, String senha);
+    Usuario login(String email, String senha);
 }
