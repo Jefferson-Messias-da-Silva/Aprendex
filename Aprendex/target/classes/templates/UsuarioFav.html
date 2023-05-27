@@ -22,46 +22,20 @@
 <body>
     <br>
     <br>
-    <div class="container">
-        <div class="cursos">
+    <div class="container" style="margin: auto">
+        <div th:each="favoritos : ${session.usuarioLogado.cursoFavorito}" class="cursos">
           <img src="Imagem/logo01.png" alt="Curso Favoritado">
           <div class="cursofav">
-            <h3 class="nomecurso">Curso xxx</h3>
-            <p class="nome-inst">Instituição yyyyy</p>
-            <p class="desc-curso">Mini Descrição</p>
-            <button class="favorite-button" onclick="toggleFavorite()">
-              <i class="fas fa-heart"></i>
-              <span class="favorite-text">Favoritar</span>
-            </button>
+              <form th:action="@{/desfavoritar}" method="post">
+            <h3 th:text="${favoritos.nome}" class="nomecurso">Curso xxx</h3>
+            <p th:text="${favoritos.instituicao}" class="nome-inst">Instituição yyyyy</p>
+            <p th:text="${favoritos.descricao}" class="desc-curso">Mini Descrição</p>
+                  <input id="cursoID" name="cursoID" th:value="${favoritos.id}" style="visibility: hidden">
+                  <input id="usuarioID" name="usuarioID" th:value="${session.usuarioLogado.id}" style="visibility: hidden">
+                  <input type="submit" value="Excluir">
+              </form>
           </div>
         </div>
-        
-        <div class="cursos">
-            <img src="Imagem/logo01.png" alt="Curso Favoritado">
-            <div class="cursofav">
-              <h3 class="nomecurso">Curso xxx</h3>
-              <p class="nome-inst">Instituição yyyyy</p>
-              <p class="desc-curso">Mini Descrição</p>
-              <button class="favorite-button" onclick="toggleFavorite()">
-                <i class="fas fa-heart"></i>
-                <span class="favorite-text">Favoritar</span>
-              </button>
-            </div>
-          </div>
-        
-          <div class="cursos">
-            <img src="Imagem/logo01.png" alt="Curso Favoritado">
-            <div class="cursofav">
-              <h3 class="nomecurso">Curso xxx</h3>
-              <p class="nome-inst">Instituição yyyyy</p>
-              <p class="desc-curso">Mini Descrição</p>
-              <button class="favorite-button" onclick="toggleFavorite()">
-                <i class="fas fa-heart"></i>
-                <span class="favorite-text">Favoritar</span>
-              </button>
-            </div>
-          </div>
-      </div>
 
 </body>
 </html>

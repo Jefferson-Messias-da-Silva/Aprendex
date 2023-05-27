@@ -15,44 +15,40 @@
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script th:src="@{/js/menufixo.js}"></script>
     <script th:src="@{/js/UsuarioFav.js}"></script>
-    <link rel="stylesheet" th:href="@{/css/UsuarioFav.css}">
     <title>Dados Pessoais</title>
 </head>
 <nav th:replace="~{menu::menu}" >  </nav>
-</nav>
 <br>
 <body>
     <br>
     <div class="container">
      <br>
      <br>
-    <form class="login">
+    <form class="login" th:action="@{/alterar}" method="post">
         <h2>MEUS DADOS PESSOAIS</h2>
         <div class="box-user">
-            <input type="text" name="" required>
-            <label>Nome Completo</label>
+            <input type="text" name="nome" id="nome" th:value="${session.usuarioLogado.nome}" required>
+            <label>Nome</label>
         </div>
         <div class="box-user">
-            <input type="date" name="">
-            <label>Data de Nascimento</label>
+            <input type="text" name="sobrenome" id="sobrenome" th:value="${session.usuarioLogado.sobrenome}" required>
+            <label>Sobrenome</label>
         </div>
-
         <div class="box-user">
-            <input type="tel" id="celular" name=""  required>
-            <label for="celular">DDD e Número de celular</label>
-        </div>
-
-        <div class="box-user">
-            <input type="text" name="" required>
+            <input type="text" name="login" id="login" th:value="${session.usuarioLogado.login}" required>
             <label>Nome de Usuário</label>
         </div>
         <div class="box-user">
-            <input type="text" name="" required>
+            <input type="text" name="email" id="email"th:value="${session.usuarioLogado.email}" required>
             <label>E-mail</label>
         </div>
         <div class="box-user">
-            <input type="password" name="" required>
+            <input type="password" name="senha" id="senha" th:value="${session.usuarioLogado.senha}" required>
             <label>Crie uma Senha</label>
         </div>
+        <button type="submit" class="btn boton">Alterar Dados</button>
+        <input name="id" id="id"  th:value="${session.usuarioLogado.id}" style="visibility: hidden">
+    </form>
+    </div>
     </body>
 </html>
