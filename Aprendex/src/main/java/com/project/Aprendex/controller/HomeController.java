@@ -109,11 +109,27 @@ public class HomeController {
         ModelAndView mv = new ModelAndView();
         mv.setViewName("telacurso");
         mv.addObject("listaCategoria", cursoService.encontrarCategoria());
-        mv.addObject("listaCurso", cursoService.topCurso());
+
         mv.addObject("usuario",new Usuario());
         mv.addObject("curso",new Curso());
         return mv;
     }
+
+    @GetMapping (value = "/cursos/{categoria}")
+
+    public ModelAndView categoria(@PathVariable String categoria){
+        ModelAndView mv = new ModelAndView();
+        mv.addObject("categoria",categoria);
+        mv.addObject("listaCurso", cursoService.cursodaCategoria(categoria));
+        mv.addObject("usuario",new Usuario());
+        mv.addObject("curso",new Curso());
+        mv.setViewName("telacurso");
+        return mv;
+    }
+
+
+
+
     @GetMapping("/cadastro-cursos")
     public ModelAndView cadastrocursos(){
         ModelAndView mv = new ModelAndView();

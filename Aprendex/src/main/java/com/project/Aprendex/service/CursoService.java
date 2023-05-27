@@ -23,4 +23,5 @@ public interface CursoService {
 
     public List<String> encontrarCategoria();
 
+    public List<Curso> cursodaCategoria(String categoria);
 }

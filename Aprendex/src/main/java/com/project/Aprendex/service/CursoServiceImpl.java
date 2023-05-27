@@ -59,5 +59,13 @@ public class CursoServiceImpl implements CursoService {
         return listacategoria;
     }
 
+    @Override
+    public List<Curso> cursodaCategoria(String categoria) {
+        List<Curso> cursos=this.cursoRepository.findByCategoria(categoria);
+        return cursos;
+    }
+
+
+
 
 }

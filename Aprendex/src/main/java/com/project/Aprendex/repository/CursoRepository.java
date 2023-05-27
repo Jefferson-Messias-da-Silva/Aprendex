@@ -30,6 +30,6 @@ public interface CursoRepository extends MongoRepository<Curso, String> {
     })
     List<String> findDistinctCategories();
 
-    Curso findByCategoria();
+    List<Curso> findByCategoria(String categoria);
 
 }
