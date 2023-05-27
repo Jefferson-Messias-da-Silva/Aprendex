@@ -72,6 +72,14 @@ public class HomeController {
 
         return "redirect:";
     }
+
+    @RequestMapping (value="/alterar",method=RequestMethod.POST)
+    public String alterar(@ModelAttribute Usuario usuario) {
+
+        this.usuarioService.alteraDados(usuario);
+
+        return "redirect:";
+    }
     @PostMapping (value="/logado")
     public ModelAndView logado(HttpSession session, Usuario usuario) {
         ModelAndView mv = new ModelAndView();
@@ -115,21 +123,6 @@ public class HomeController {
         return mv;
     }
 
-    /*@GetMapping (value = "/cursos")
-
-    public ModelAndView categoria(@PathVariable String categoria){
-        ModelAndView mv = new ModelAndView();
-        mv.addObject("categoria",categoria);
-        mv.addObject("listaCurso", cursoService.cursodaCategoria(categoria));
-        mv.addObject("usuario",new Usuario());
-        mv.addObject("curso",new Curso());
-        mv.setViewName("telacurso");
-        return mv;
-    }*/
-
-
-
-
     @GetMapping("/cadastro-cursos")
     public ModelAndView cadastrocursos(){
         ModelAndView mv = new ModelAndView();
@@ -149,4 +142,19 @@ public class HomeController {
         return mv;
     }
 
+    @RequestMapping(value = "/favoritar")
+    public String favoritar(String cursoID, String usuarioID){
+        ModelAndView mv = new ModelAndView();
+        this.usuarioService.favoritaCurso(usuarioID,cursoID);
+        mv.setViewName("telacurso");
+        return "redirect:/cursos";
+    }
+
+    @RequestMapping(value = "/desfavoritar")
+    public ModelAndView desfavoritar(String cursoID, String usuarioID, HttpSession session){
+        ModelAndView mv = new ModelAndView();
+        session.setAttribute("usuarioLogado",this.usuarioService.desfavoritaCurso(usuarioID,cursoID));
+        mv.setViewName("UsuarioFav");
+        return favoritos();
+    }
 }

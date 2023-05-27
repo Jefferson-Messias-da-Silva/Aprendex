@@ -35,15 +35,18 @@
         <div  id="tabs-1">
             <div id="tab0" class="tab-content" >
                 <div  th:each="curso:${listaCurso}"  class="planColumn">
+                    <form th:action="@{/favoritar}" method="post">
                   <h2 th:text="${curso.nome}" ></h2>
-                    <div class="planOptionDetailText">XXXXXXX</div>
-                    <div class="planOptionDetailText">XXXXXXXXX</div>
-                    <div class="planSignup"><button href="#" class="btn-orange">Inscreva - se</button></div>
-                    <button class="favorite-button" onclick="toggleFavorite()">
+                    <div th:text="${curso.descricao}" class="planOptionDetailText"></div>
+                    <div th:text="${curso.instituicao}" class="planOptionDetailText"></div>
+                    <div class="planSignup"><button href="#" class="btn-orange" style="text-align: center; margin: auto"><a th:href="${curso.link}" style="text-decoration: none; color: white; font-family: Candara" target="_blank">Inscreva-se</a></button></div>
                         <i class="fas fa-heart"></i>
-                        <span class="favorite-text">Favoritar</span>
-                    </button>
+                    <input type="submit" value="Favoritar">
+                    <input id="cursoID" name="cursoID" th:value="${curso.id}" class="favorite-button" style="visibility: hidden" >
+                    <input id="usuarioID" name="usuarioID" th:value="${session.usuarioLogado.id}" style="visibility: hidden">
+                    </form>
                 </div>
+
                 </div>
             </div>
         </div>

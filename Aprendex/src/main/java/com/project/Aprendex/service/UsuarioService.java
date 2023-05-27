@@ -12,4 +12,11 @@ public interface UsuarioService{
     boolean validaEmail(Usuario usuario);
 
     Usuario login(String email, String senha);
+
+    void favoritaCurso(String idUsuario,String idCurso);
+
+    Usuario desfavoritaCurso(String idUsuario, String idCurso);
+
+    void alteraDados(Usuario usuario);
+
 }

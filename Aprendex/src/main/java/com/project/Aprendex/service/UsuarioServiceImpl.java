@@ -1,17 +1,25 @@
 package com.project.Aprendex.service;
 
+import com.project.Aprendex.model.Curso;
+import com.project.Aprendex.repository.CursoRepository;
 import com.project.Aprendex.repository.UsuarioRepository;
 import com.project.Aprendex.model.Usuario;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Service
 public class UsuarioServiceImpl implements UsuarioService{
     @Autowired
     private UsuarioRepository usuarioRepository;
+    @Autowired
+    private CursoRepository cursoRepository;
+
+    private Usuario usuario =new Usuario();
 
 
     @Override
@@ -45,5 +53,38 @@ public class UsuarioServiceImpl implements UsuarioService{
 
         System.out.println(validar);
         return validar > 0;
+    }
+
+    @Override
+    public void favoritaCurso(String idUsuario,String idCurso){
+        Curso curso = this.cursoRepository.findCursoById(idCurso);
+        List<Curso> cursos = new ArrayList<>();
+        usuario = this.usuarioRepository.findUsuarioById(idUsuario);
+        cursos = usuario.getCursoFavorito();
+        cursos.add(curso);
+        usuario.setCursoFavorito(cursos);
+        this.usuarioRepository.save(usuario);
+    }
+
+    @Override
+    public void alteraDados(Usuario Ausuario){
+
+        usuario = this.usuarioRepository.findUsuarioById(Ausuario.getId());
+        Ausuario.setCursoFavorito(usuario.getCursoFavorito());
+        usuario = Ausuario;
+        this.usuarioRepository.save(usuario);
+    }
+
+    @Override
+    public Usuario desfavoritaCurso(String idUsuario, String idCurso){
+        usuario = this.usuarioRepository.findUsuarioById(idUsuario);
+        List<Curso> cursos = usuario.getCursoFavorito();
+        for(int i = 0; i < cursos.size(); i++){
+            if(cursos.get(i).getId().equals(idCurso)){
+                cursos.remove(i);
+            }
+        }
+        usuario.setCursoFavorito(cursos);
+        return this.usuarioRepository.save(usuario);
     }
 }
