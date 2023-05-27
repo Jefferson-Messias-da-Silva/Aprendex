@@ -6,6 +6,7 @@ import lombok.Data;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Date;
+import java.util.List;
 
 @Data
 @Document(collection="Usuarios")
@@ -22,7 +23,8 @@ public class Usuario {
     private String email;
     private Integer tipo;
     private Date dtnascimento;
-    public Usuario(String id, String nome, String sobrenome, String login, String senha, String email, Integer tipo, Date dtnascimento) {
+    private List<Curso> cursoFavorito;
+    public Usuario(String id, String nome, String sobrenome, String login, String senha, String email, Integer tipo, Date dtnascimento, List<Curso> cursoFavorito) {
         this.id = id;
         this.nome = nome;
         this.sobrenome = sobrenome;
@@ -31,6 +33,7 @@ public class Usuario {
         this.email = email;
         this.tipo = tipo;
         this.dtnascimento = dtnascimento;
+        this.cursoFavorito = cursoFavorito;
     }
 
     public Usuario() {
@@ -40,14 +43,15 @@ public class Usuario {
     @Override
     public String toString() {
         return "Usuario{" +
-                "id=" + id +
+                "id='" + id + '\'' +
                 ", nome='" + nome + '\'' +
                 ", sobrenome='" + sobrenome + '\'' +
                 ", login='" + login + '\'' +
                 ", senha='" + senha + '\'' +
                 ", email='" + email + '\'' +
                 ", tipo=" + tipo +
-                ", data de nascimento=" + dtnascimento +
+                ", dtnascimento=" + dtnascimento +
+                ", cursoFavorito=" + cursoFavorito +
                 '}';
     }
 }

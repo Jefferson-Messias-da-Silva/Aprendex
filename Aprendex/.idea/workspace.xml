@@ -4,18 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="943894bb-8af7-42bf-914e-4f2eee3b6805" name="Changes" comment="fodase">
+    <list default="true" id="943894bb-8af7-42bf-914e-4f2eee3b6805" name="Changes" comment="Alterações front end">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/model/Curso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/model/Curso.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/cursos.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/cursos.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cadastroCurso.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cadastroCurso.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/model/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/home.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/telacurso.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/telacurso.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/Aprendex/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/Aprendex/controller/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/Aprendex/model/Curso.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/Aprendex/model/Curso.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/cursos.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/cursos.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/telacurso.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/telacurso.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +66,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Pichau\Documents\Projetos\Aprendex\Aprendex\Aprendex\src\main\resources\static\css" />
       <recent name="C:\Users\PICHAU\Desktop\projeto Aprendex\Aprendex\Aprendex\src\main\resources\templates" />
       <recent name="C:\Users\PICHAU\Desktop\projeto Aprendex\Aprendex\Aprendex\src\main\resources\static\css" />
       <recent name="C:\Users\PICHAU\Desktop\projeto Aprendex\Aprendex\Aprendex\src\main\resources\static\js" />
@@ -117,6 +113,7 @@
       <workItem from="1685113936194" duration="12432000" />
       <workItem from="1685163642994" duration="75000" />
       <workItem from="1685195739409" duration="4699000" />
+      <workItem from="1685205155431" duration="1138000" />
     </task>
     <task id="LOCAL-00001" summary="Criação de services do usuario">
       <created>1684547659459</created>
@@ -167,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685152064937</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Alterações front end">
+      <created>1685205236152</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1685205236152</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,6 +225,7 @@
     <MESSAGE value="Arrumando o login" />
     <MESSAGE value="adicionado sair da sessão e cursos em destaque" />
     <MESSAGE value="fodase" />
-    <option name="LAST_COMMIT_MESSAGE" value="fodase" />
+    <MESSAGE value="Alterações front end" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alterações front end" />
   </component>
 </project>
