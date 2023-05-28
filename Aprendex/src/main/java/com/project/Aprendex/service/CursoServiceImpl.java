@@ -4,7 +4,11 @@ import com.project.Aprendex.model.*;
 import com.project.Aprendex.repository.CursoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -14,6 +18,8 @@ public class CursoServiceImpl implements CursoService {
 
     @Autowired
     private CursoRepository cursoRepository;
+
+    private final Path root = Paths.get("./main/resources/static/imagem");
 
     @Override
     public Curso cadastrarCurso(Curso curso) {
@@ -72,5 +78,12 @@ public class CursoServiceImpl implements CursoService {
         return cursobuscado;
     }
 
-
+    @Override
+    public void save(MultipartFile file){
+        try {
+            Files.copy(file.getInputStream(), this.root.resolve(file.getOriginalFilename()));
+        }catch (Exception e){
+            throw new RuntimeException("A file of that name already exists.");
+        }
+    }
 }

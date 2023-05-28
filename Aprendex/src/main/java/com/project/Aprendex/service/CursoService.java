@@ -2,6 +2,7 @@ package com.project.Aprendex.service;
 
 import com.project.Aprendex.model.Curso;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 import java.util.Objects;
@@ -26,4 +27,6 @@ public interface CursoService {
     public List<Curso> cursodaCategoria(String categoria);
 
     public List<Curso> encontrarCurso(String nome);
+
+    public void save(MultipartFile file);
 }

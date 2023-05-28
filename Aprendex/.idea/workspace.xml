@@ -4,21 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="943894bb-8af7-42bf-914e-4f2eee3b6805" name="Changes" comment="Finalizando as ultimas funcionalidades.">
+    <list default="true" id="943894bb-8af7-42bf-914e-4f2eee3b6805" name="Changes" comment="Tratando Erros.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/service/UsuarioService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/service/UsuarioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/service/UsuarioServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style2.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/DadosPessoais.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/DadosPessoais.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/service/CursoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/service/CursoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/service/CursoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/service/CursoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/UsuarioFav.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/UsuarioFav.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/busca.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/busca.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cadastro.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cadastro.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cadastroCurso.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cadastroCurso.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sobre.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sobre.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/telacurso.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/telacurso.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/Aprendex/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/Aprendex/controller/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/cadastroCurso.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/cadastroCurso.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +120,7 @@
       <workItem from="1685205155431" duration="11979000" />
       <workItem from="1685217383800" duration="334000" />
       <workItem from="1685235992718" duration="1557000" />
-      <workItem from="1685280778080" duration="4772000" />
+      <workItem from="1685280778080" duration="7713000" />
     </task>
     <task id="LOCAL-00001" summary="Criação de services do usuario">
       <created>1684547659459</created>
@@ -203,7 +199,21 @@
       <option name="project" value="LOCAL" />
       <updated>1685217094123</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Tratando Erros.">
+      <created>1685286001501</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1685286001501</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Tratando Erros.">
+      <created>1685286162922</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1685286162922</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,6 +269,7 @@
     <MESSAGE value="fodase" />
     <MESSAGE value="Alterações front end" />
     <MESSAGE value="Finalizando as ultimas funcionalidades." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finalizando as ultimas funcionalidades." />
+    <MESSAGE value="Tratando Erros." />
+    <option name="LAST_COMMIT_MESSAGE" value="Tratando Erros." />
   </component>
 </project>
