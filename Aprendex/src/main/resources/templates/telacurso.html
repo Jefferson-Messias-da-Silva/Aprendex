@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="http:/resources/demos/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
     <script>
     $( function() {
       $( "#tabs" ).tabs();
@@ -36,17 +37,16 @@
             <div id="tab0" class="tab-content" >
                 <div  th:each="curso:${listaCurso}"  class="planColumn">
                     <form th:action="@{/favoritar}" method="post">
-                  <h2 th:text="${curso.nome}" ></h2>
+                    <h2 th:text="${curso.nome}" ></h2>
                     <div th:text="${curso.descricao}" class="planOptionDetailText"></div>
                     <div th:text="${curso.instituicao}" class="planOptionDetailText"></div>
                     <div class="planSignup"><button href="#" class="btn-orange" style="text-align: center; margin: auto"><a th:href="${curso.link}" style="text-decoration: none; color: white; font-family: Candara" target="_blank">Inscreva-se</a></button></div>
-                        <i class="fas fa-heart"></i>
-                    <input type="submit" value="Favoritar">
+                        <i th:if="${session.usuarioLogado !=  null}" class="fas fa-heart"></i>
+                    <input th:if="${session.usuarioLogado !=  null}" type="submit" value="Favoritar">
                     <input id="cursoID" name="cursoID" th:value="${curso.id}" class="favorite-button" style="visibility: hidden" >
-                    <input id="usuarioID" name="usuarioID" th:value="${session.usuarioLogado.id}" style="visibility: hidden">
+                    <input th:if="${session.usuarioLogado !=  null}" id="usuarioID" name="usuarioID" th:value="${session.usuarioLogado.id}" style="visibility: hidden">
                     </form>
                 </div>
-
                 </div>
             </div>
         </div>

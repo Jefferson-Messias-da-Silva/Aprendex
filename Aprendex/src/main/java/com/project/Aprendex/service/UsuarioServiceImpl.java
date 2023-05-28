@@ -56,14 +56,20 @@ public class UsuarioServiceImpl implements UsuarioService{
     }
 
     @Override
-    public void favoritaCurso(String idUsuario,String idCurso){
+    public Usuario favoritaCurso(String idUsuario,String idCurso){
         Curso curso = this.cursoRepository.findCursoById(idCurso);
         List<Curso> cursos = new ArrayList<>();
         usuario = this.usuarioRepository.findUsuarioById(idUsuario);
-        cursos = usuario.getCursoFavorito();
-        cursos.add(curso);
-        usuario.setCursoFavorito(cursos);
+        if(usuario.getCursoFavorito() != null) {
+            cursos = usuario.getCursoFavorito();
+            cursos.add(curso);
+            usuario.setCursoFavorito(cursos);
+        }else{
+            cursos.add(curso);
+            usuario.setCursoFavorito(cursos);
+        }
         this.usuarioRepository.save(usuario);
+        return usuario;
     }
 
     @Override

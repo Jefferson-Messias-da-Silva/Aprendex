@@ -13,7 +13,7 @@ public interface UsuarioService{
 
     Usuario login(String email, String senha);
 
-    void favoritaCurso(String idUsuario,String idCurso);
+    Usuario favoritaCurso(String idUsuario,String idCurso);
 
     Usuario desfavoritaCurso(String idUsuario, String idCurso);
 

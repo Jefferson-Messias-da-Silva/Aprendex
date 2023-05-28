@@ -30,14 +30,12 @@ public class HomeController {
     @GetMapping("/sair")
     public  String sair(HttpSession session){
         session.invalidate();
-
         return "redirect:";
     }
 
 
     @GetMapping("/sobre")
     public ModelAndView sobre () {
-
         ModelAndView mv = new ModelAndView();
         mv.setViewName("sobre");
         mv.addObject("usuario",new Usuario());
@@ -143,9 +141,9 @@ public class HomeController {
     }
 
     @RequestMapping(value = "/favoritar")
-    public String favoritar(String cursoID, String usuarioID){
+    public String favoritar(String cursoID, String usuarioID, HttpSession session){
         ModelAndView mv = new ModelAndView();
-        this.usuarioService.favoritaCurso(usuarioID,cursoID);
+        session.setAttribute("usuarioLogado",this.usuarioService.favoritaCurso(usuarioID,cursoID));
         mv.setViewName("telacurso");
         return "redirect:/cursos";
     }
