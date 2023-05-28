@@ -24,7 +24,7 @@
     <br>
     <div class="container" style="margin: auto">
         <div th:each="favoritos : ${session.usuarioLogado.cursoFavorito}" class="cursos">
-          <img src="Imagem/logo01.png" alt="Curso Favoritado">
+            <img th:src="@{${'/Imagem/'+ favoritos.img}}" style="width: 427px; height: 427px;" alt="Curso Favoritado">
           <div class="cursofav">
               <form th:action="@{/desfavoritar}" method="post">
             <h3 th:text="${favoritos.nome}" class="nomecurso">Curso xxx</h3>
@@ -32,7 +32,7 @@
             <p th:text="${favoritos.descricao}" class="desc-curso">Mini Descrição</p>
                   <input id="cursoID" name="cursoID" th:value="${favoritos.id}" style="visibility: hidden">
                   <input id="usuarioID" name="usuarioID" th:value="${session.usuarioLogado.id}" style="visibility: hidden">
-                  <input type="submit" value="Excluir">
+                  <input type="submit" style="cursor: pointer" value="Excluir">
               </form>
           </div>
         </div>
