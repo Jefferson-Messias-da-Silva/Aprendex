@@ -62,6 +62,11 @@ public class UsuarioServiceImpl implements UsuarioService{
         usuario = this.usuarioRepository.findUsuarioById(idUsuario);
         if(usuario.getCursoFavorito() != null) {
             cursos = usuario.getCursoFavorito();
+            for(int i =0; i<cursos.size(); i++){
+                if(cursos.get(i).getId().equals(idCurso)){
+                    return usuario;
+                }
+            }
             cursos.add(curso);
             usuario.setCursoFavorito(cursos);
         }else{

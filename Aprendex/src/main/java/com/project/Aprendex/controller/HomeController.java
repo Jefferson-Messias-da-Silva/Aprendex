@@ -60,6 +60,7 @@ public class HomeController {
         ModelAndView mv = new ModelAndView();
         mv.setViewName("UsuarioFav");
         mv.addObject("usuario",new Usuario());
+        mv.addObject("curso",new Curso());
         return mv;
     }
 
@@ -147,11 +148,12 @@ public class HomeController {
     }
 
     @RequestMapping(value = "/favoritar")
-    public String favoritar(String cursoID, String usuarioID, HttpSession session){
+    public ModelAndView favoritar(String cursoID, String usuarioID, HttpSession session){
         ModelAndView mv = new ModelAndView();
         session.setAttribute("usuarioLogado",this.usuarioService.favoritaCurso(usuarioID,cursoID));
+        mv.addObject("listaCategoria", cursoService.encontrarCategoria());
         mv.setViewName("telacurso");
-        return "redirect:/cursos";
+        return mv;
     }
 
     @RequestMapping(value = "/desfavoritar")

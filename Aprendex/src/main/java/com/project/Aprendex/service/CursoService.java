@@ -27,6 +27,4 @@ public interface CursoService {
     public List<Curso> cursodaCategoria(String categoria);
 
     public List<Curso> encontrarCurso(String nome);
-
-    public void save(MultipartFile file);
 }

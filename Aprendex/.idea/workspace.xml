@@ -4,17 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="943894bb-8af7-42bf-914e-4f2eee3b6805" name="Changes" comment="Tratando Erros.">
+    <list default="true" id="943894bb-8af7-42bf-914e-4f2eee3b6805" name="Changes" comment="Adicionando uploads de Imagens.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/controller/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/service/CursoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/service/CursoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/service/CursoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/service/CursoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/service/UsuarioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/Aprendex/service/UsuarioServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/Imagem/fatec-diadema.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/busca.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/busca.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/cursos.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/cursos.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/usuarioFav.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/usuarioFav.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/UsuarioFav.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/UsuarioFav.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/busca.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/busca.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cadastroCurso.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cadastroCurso.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/telacurso.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/telacurso.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/Aprendex/Repository/CursoRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/Aprendex/Repository/CursoRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/Aprendex/Repository/UsuarioRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/Aprendex/Repository/UsuarioRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/Aprendex/Service/CursoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/Aprendex/Service/CursoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/Aprendex/Service/CursoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/Aprendex/Service/CursoServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/Aprendex/Service/UsuarioService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/Aprendex/Service/UsuarioService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/Aprendex/Service/UsuarioServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/Aprendex/Service/UsuarioServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/project/Aprendex/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/Aprendex/controller/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/cadastroCurso.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/cadastroCurso.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/Aprendex/model/Curso.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/Aprendex/model/Curso.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/Aprendex/model/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/Aprendex/model/Usuario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/Imagem/fatec-diadema.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/busca.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/busca.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/cursos.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/cursos.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/usuarioFav.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/usuarioFav.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/UsuarioFav.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/UsuarioFav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/busca.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/busca.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/telacurso.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/telacurso.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +142,8 @@
       <workItem from="1685205155431" duration="11979000" />
       <workItem from="1685217383800" duration="334000" />
       <workItem from="1685235992718" duration="1557000" />
-      <workItem from="1685280778080" duration="7713000" />
+      <workItem from="1685280778080" duration="16574000" />
+      <workItem from="1685298655633" duration="23000" />
     </task>
     <task id="LOCAL-00001" summary="Criação de services do usuario">
       <created>1684547659459</created>
@@ -213,7 +236,28 @@
       <option name="project" value="LOCAL" />
       <updated>1685286162922</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Adicionando uploads de Imagens.">
+      <created>1685288870765</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1685288870765</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Adicionando uploads de Imagens.">
+      <created>1685288881686</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1685288881686</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Adicionando uploads de Imagens.">
+      <created>1685288900071</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1685288900071</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,6 +314,14 @@
     <MESSAGE value="Alterações front end" />
     <MESSAGE value="Finalizando as ultimas funcionalidades." />
     <MESSAGE value="Tratando Erros." />
-    <option name="LAST_COMMIT_MESSAGE" value="Tratando Erros." />
+    <MESSAGE value="Adicionando uploads de Imagens." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionando uploads de Imagens." />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.project.Aprendex.service.CursoServiceImpl" memberName="root" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

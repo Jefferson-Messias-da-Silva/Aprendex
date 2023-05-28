@@ -18,6 +18,21 @@ nav {
     border-color: #fff;
 }
 
+.btnexcluir{
+    cursor: pointer;
+    position: relative;
+    text-align: right;
+    float: right;
+    margin-left: 3.7%;
+    border-radius: 8px;
+    background-color: rgb(255, 126, 126);
+    font-size: 16px;
+    margin-top: 60%;
+}
+
+.btnexcluir:hover{
+    background-color: rgb(255, 166, 166);
+}
 
 .FixoNoTopo + .principal{
     padding-top: 60px;

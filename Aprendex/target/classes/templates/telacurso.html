@@ -39,12 +39,14 @@
                     <form th:action="@{/favoritar}" method="post">
                     <h2 th:text="${curso.nome}" ></h2>
                     <div th:text="${curso.descricao}" class="planOptionDetailText"></div>
-                    <div th:text="${curso.instituicao}" class="planOptionDetailText"></div>
+                    <div th:text="${'Intituição: '+curso.instituicao}" class="planOptionDetailText"></div>
                     <div class="planSignup"><button href="#" class="btn-orange" style="text-align: center; margin: auto"><a th:href="${curso.link}" style="text-decoration: none; color: white; font-family: Candara" target="_blank">Inscreva-se</a></button></div>
+                        <div class="btnfav">
                         <i th:if="${session.usuarioLogado !=  null}" class="fas fa-heart"></i>
                     <input th:if="${session.usuarioLogado !=  null}" style="cursor: pointer" type="submit" value="Favoritar">
                     <input id="cursoID" name="cursoID" th:value="${curso.id}" class="favorite-button" style="visibility: hidden" >
                     <input th:if="${session.usuarioLogado !=  null}" id="usuarioID" name="usuarioID" th:value="${session.usuarioLogado.id}" style="visibility: hidden">
+                    </div>
                     </form>
                 </div>
                 </div>

@@ -19,8 +19,6 @@ public class CursoServiceImpl implements CursoService {
     @Autowired
     private CursoRepository cursoRepository;
 
-    private final Path root = Paths.get("./main/resources/static/imagem");
-
     @Override
     public Curso cadastrarCurso(Curso curso) {
         return this.cursoRepository.save(curso);
@@ -76,14 +74,5 @@ public class CursoServiceImpl implements CursoService {
         List<Curso> cursobuscado=this.cursoRepository.findByNomeLikeIgnoreCase(nome);
 
         return cursobuscado;
-    }
-
-    @Override
-    public void save(MultipartFile file){
-        try {
-            Files.copy(file.getInputStream(), this.root.resolve(file.getOriginalFilename()));
-        }catch (Exception e){
-            throw new RuntimeException("A file of that name already exists.");
-        }
     }
 }
